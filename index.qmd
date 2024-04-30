@@ -1,5 +1,8 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is a collection of personal use cases of ChatGPT for: 
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+* learning foreign languages.
+* learning programming
+* learning math, calculus, linear algebra, etc. 
+
