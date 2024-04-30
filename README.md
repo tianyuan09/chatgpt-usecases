@@ -1,2 +1,2 @@
 # chatgpt-usecases
-A Collection of Personal Usecases of ChatGPT for language learning, coding, and many more. 
+A collection of personal use cases of ChatGPT for language learning, coding, and many more.
