@@ -1,0 +1,31 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "ChatGPT Use Cases"
+  author: "Yuan Tian"
+  cover-image: cover.png
+  date: "4/30/2024"
+  search: true
+  repo-url: "https://github.com/tianyuan09/chatgpt-usecases"
+  sidebar:
+    style: "floating" # docked or floating
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+comments:
+  hypothesis: true
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cerulean
+    # https://quarto.org/docs/output-formats/html-themes.html
+
+
+
