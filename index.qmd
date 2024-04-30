@@ -1,8 +1,0 @@
-# Preface {.unnumbered}
-
-This is a collection of personal use cases of ChatGPT for: 
-
-* learning foreign languages.
-* learning programming
-* learning math, calculus, linear algebra, etc. 
-
