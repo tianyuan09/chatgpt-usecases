@@ -25,9 +25,9 @@ bibliography: references.bib
 format:
   html:
     theme: 
-      light: lumen
+      light: cerulean
       dark: darkly
-    # good choices: lumen
+    # good choices: lumen,zephyr
     # https://quarto.org/docs/output-formats/html-themes.html
     fontsize: 1em
     linestretch: 1.1
