@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "ChatGPT Use Cases",
+    "title": "ChatGPT Personal Log",
     "section": "",
-    "text": "Preface\nA collection of personal use cases of ChatGPT.",
+    "text": "Preface\nThis is a collection of my practical use cases with ChatGPT.\nIt contains ChatGPT’s answers related to learning a foreign language, coding, math, etc.",
     "crumbs": [
       "Preface"
     ]
@@ -297,6 +297,26 @@
     "text": "4.6 Verbs (쓰다, 시다)\n쓰다 (to write/use/wear)\nExample Sentences:\n\n편지를 씁니다. (I write a letter.)\n이 컴퓨터를 사용해도 됩니까? (Can I use this computer?)\n모자를 씁니다. (I wear a hat.)\n\n시다 (to be sour)\nExample Sentences:\n\n이 레몬은 정말 셔요. (This lemon is really sour.)\n어제 먹은 김치가 좀 셨어요. (The kimchi I ate yesterday was a bit sour.)\n사과보다 레몬이 더 셔요. (Lemons are more sour than apples.)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Learn Korean</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#chatgpt-usage-guidelines-good-practice-vs.-bad-practice",
+    "href": "index.html#chatgpt-usage-guidelines-good-practice-vs.-bad-practice",
+    "title": "ChatGPT Use Cases",
+    "section": "ChatGPT Usage Guidelines: Good Practice vs. Bad Practice",
+    "text": "ChatGPT Usage Guidelines: Good Practice vs. Bad Practice\n\nGood Practice:\nCode Writing and Grammar Checking: Use ChatGPT to write or debug code and check grammar, as these can be immediately verified. Non-Critical Questions: Utilize ChatGPT for emotional support, casual conversation, or drafting documents where precise correctness isn’t crucial. Verifiable Questions: Ensure there are other methods to verify ChatGPT’s responses to maintain accuracy.\n\n\nBad Practice:\nUnverifiable Questions: Avoid asking ChatGPT questions where you can’t verify the correctness of the answers. Relying on Exact Answers: Do not depend on ChatGPT for answers that are crucial and cannot be verified. Blind Trust: Do not blindly trust ChatGPT’s information; always verify important details to avoid misinformation.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#chatgpt-usage-guidelines",
+    "href": "index.html#chatgpt-usage-guidelines",
+    "title": "ChatGPT Personal Log",
+    "section": "ChatGPT Usage Guidelines",
+    "text": "ChatGPT Usage Guidelines\nGood Practice:\n\nCode Writing and Grammar Checking: Use ChatGPT to write or debug code and check grammar, as these can be immediately verified.\nNon-Critical Questions: Utilize ChatGPT for emotional support, casual conversation, or drafting documents where precise correctness isn’t crucial.\nVerifiable Questions: Ensure there are other methods to verify ChatGPT’s responses to maintain accuracy.\n\nBad Practice:\n\nUnverifiable Questions: Avoid asking ChatGPT questions where you can’t verify the correctness of the answers.\nCritical Questions: Do not depend on ChatGPT for answers that are crucial and cannot be verified.\nBlind Trust: Do not blindly trust ChatGPT’s information; always verify important details to avoid misinformation.",
+    "crumbs": [
+      "Preface"
     ]
   }
 ]

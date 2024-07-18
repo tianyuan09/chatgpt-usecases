@@ -3,10 +3,10 @@ project:
   output-dir: docs
 
 book:
-  title: "ChatGPT Use Cases"
+  title: "ChatGPT Personal Log"
   author: "Yuan Tian"
   cover-image: cover.png
-  date: "4/30/2024"
+  date: "07/18/2024"
   search: true
   repo-url: "https://github.com/tianyuan09/chatgpt-usecases"
   sidebar:
