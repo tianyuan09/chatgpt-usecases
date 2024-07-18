@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ChatGPT Use Cases - 2&nbsp; MIT Linear Algebra Review</title>
+<title>ChatGPT Use Cases - 2&nbsp; Math Review: Linear Algebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,7 +118,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linearalgebra.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MIT Linear Algebra Review</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linearalgebra.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Math Review: Linear Algebra</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,19 +156,19 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./korean.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean 연세한국어</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linearalgebra.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MIT Linear Algebra Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Math Review: Linear Algebra</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ggplot2 demo</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -187,10 +187,8 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#diagonalization" id="toc-diagonalization" class="nav-link active" data-scroll-target="#diagonalization"><span class="header-section-number">2.1</span> Diagonalization</a>
-  <ul class="collapse">
-  <li><a href="#key-points-on-diagonalizability" id="toc-key-points-on-diagonalizability" class="nav-link" data-scroll-target="#key-points-on-diagonalizability"><span class="header-section-number">2.1.12</span> Key Points on Diagonalizability</a></li>
-  </ul></li>
+  <li><a href="#diagonalization" id="toc-diagonalization" class="nav-link active" data-scroll-target="#diagonalization"><span class="header-section-number">2.1</span> Diagonalization</a></li>
+  <li><a href="#key-points-on-diagonalizability" id="toc-key-points-on-diagonalizability" class="nav-link" data-scroll-target="#key-points-on-diagonalizability"><span class="header-section-number">2.2</span> Key Points on Diagonalizability</a></li>
   </ul>
 </nav>
     </div>
@@ -199,7 +197,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MIT Linear Algebra Review</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Math Review: Linear Algebra</span></h1>
 </div>
 
 
@@ -544,8 +542,9 @@ A^3 = P D^3 P^{-1} = \begin{pmatrix}
 </div>
 </div>
 </div>
-<section id="key-points-on-diagonalizability" class="level3" data-number="2.1.12">
-<h3 data-number="2.1.12" class="anchored" data-anchor-id="key-points-on-diagonalizability"><span class="header-section-number">2.1.12</span> Key Points on Diagonalizability</h3>
+</section>
+<section id="key-points-on-diagonalizability" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="key-points-on-diagonalizability"><span class="header-section-number">2.2</span> Key Points on Diagonalizability</h2>
 <ol type="1">
 <li><p><strong>Eigenvalues and Eigenvectors</strong>: A matrix (A) is diagonalizable if and only if it has enough linearly independent eigenvectors to form the columns of the matrix (P). The diagonal elements of (D) are the eigenvalues of (A).</p></li>
 <li><p><strong>Similarity Transformation</strong>: The matrix (P) in the equation (P^{-1}AP = D) is formed from the eigenvectors of (A). This is known as a similarity transformation.</p></li>
@@ -556,7 +555,6 @@ A^3 = P D^3 P^{-1} = \begin{pmatrix}
 <p>In summary, a matrix being diagonalizable means it can be represented in a simpler form (a diagonal matrix) through a similarity transformation, making many matrix computations more straightforward and highlighting the structure given by the matrix’s eigenvalues and eigenvectors.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1115,13 +1113,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./korean.html" class="pagination-link" aria-label="Learn Korean 연세한국어">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean 연세한국어</span></span>
+      <a href="./korean.html" class="pagination-link" aria-label="Learn Korean">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro.html" class="pagination-link" aria-label="ggplot2 demo">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ggplot2 demo</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
