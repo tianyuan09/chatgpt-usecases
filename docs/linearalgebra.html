@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ChatGPT Use Cases - 1&nbsp; Learn Korean 연세한국어</title>
+<title>ChatGPT Use Cases - 2&nbsp; MIT Linear Algebra Review</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./java.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./intro.html" rel="next">
+<link href="./korean.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -89,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./korean.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean 연세한국어</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linearalgebra.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MIT Linear Algebra Review</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,14 +155,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./korean.html" class="sidebar-item-text sidebar-link active">
+  <a href="./korean.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean 연세한국어</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./java.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">java.html</span></span></a>
+  <a href="./linearalgebra.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MIT Linear Algebra Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,26 +187,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#연세한국어1" id="toc-연세한국어1" class="nav-link active" data-scroll-target="#연세한국어1"><span class="header-section-number">1.1</span> 연세한국어1</a>
+  <li><a href="#diagonalization" id="toc-diagonalization" class="nav-link active" data-scroll-target="#diagonalization"><span class="header-section-number">2.1</span> Diagonalization</a>
   <ul class="collapse">
-  <li><a href="#verb-conjugation-for-questions-아요어요" id="toc-verb-conjugation-for-questions-아요어요" class="nav-link" data-scroll-target="#verb-conjugation-for-questions-아요어요"><span class="header-section-number">1.1.1</span> Verb Conjugation for Questions (아요/어요)</a></li>
-  <li><a href="#verbs-하다-타다-가다-세우다" id="toc-verbs-하다-타다-가다-세우다" class="nav-link" data-scroll-target="#verbs-하다-타다-가다-세우다"><span class="header-section-number">1.1.2</span> Verbs (하다, 타다, 가다, 세우다)</a></li>
-  <li><a href="#descriptive-form-어서아서" id="toc-descriptive-form-어서아서" class="nav-link" data-scroll-target="#descriptive-form-어서아서"><span class="header-section-number">1.1.3</span> Descriptive Form (어서/아서)</a></li>
-  <li><a href="#use-of-로-to-indicate-direction-으로로" id="toc-use-of-로-to-indicate-direction-으로로" class="nav-link" data-scroll-target="#use-of-로-to-indicate-direction-으로로"><span class="header-section-number">1.1.4</span> Use of “로” to Indicate Direction (으로/로)</a></li>
-  <li><a href="#honorific-form-세요주세요" id="toc-honorific-form-세요주세요" class="nav-link" data-scroll-target="#honorific-form-세요주세요"><span class="header-section-number">1.1.5</span> Honorific Form (세요/주세요)</a></li>
-  <li><a href="#verbs-쓰다-시다" id="toc-verbs-쓰다-시다" class="nav-link" data-scroll-target="#verbs-쓰다-시다"><span class="header-section-number">1.1.6</span> Verbs (쓰다, 시다)</a></li>
-  </ul></li>
-  <li><a href="#연세한국어2-1" id="toc-연세한국어2-1" class="nav-link" data-scroll-target="#연세한국어2-1"><span class="header-section-number">1.2</span> 연세한국어2-1</a>
-  <ul class="collapse">
-  <li><a href="#grammar-point-언제든지-anytime" id="toc-grammar-point-언제든지-anytime" class="nav-link" data-scroll-target="#grammar-point-언제든지-anytime"><span class="header-section-number">1.2.1</span> Grammar Point: 언제든지 (Anytime)</a></li>
-  <li><a href="#grammar-point-처음이지만-although-its-the-first-time" id="toc-grammar-point-처음이지만-although-its-the-first-time" class="nav-link" data-scroll-target="#grammar-point-처음이지만-although-its-the-first-time"><span class="header-section-number">1.2.2</span> Grammar Point: 처음이지만 (Although it’s the first time)</a></li>
-  <li><a href="#grammar-point--기-때문에--because" id="toc-grammar-point--기-때문에--because" class="nav-link" data-scroll-target="#grammar-point--기-때문에--because"><span class="header-section-number">1.2.3</span> Grammar Point: -기 때문에 (-because)</a></li>
-  <li><a href="#grammar-point-잘-well" id="toc-grammar-point-잘-well" class="nav-link" data-scroll-target="#grammar-point-잘-well"><span class="header-section-number">1.2.4</span> Grammar Point: 잘 (well)</a></li>
-  <li><a href="#grammar-point-부드러워서-because-its-gentlesoft" id="toc-grammar-point-부드러워서-because-its-gentlesoft" class="nav-link" data-scroll-target="#grammar-point-부드러워서-because-its-gentlesoft"><span class="header-section-number">1.2.5</span> Grammar Point: 부드러워서 (because it’s gentle/soft)</a></li>
-  </ul></li>
-  <li><a href="#prompts" id="toc-prompts" class="nav-link" data-scroll-target="#prompts"><span class="header-section-number">2</span> Prompts</a>
-  <ul class="collapse">
-  <li><a href="#workflow-1-grammar-and-verbs" id="toc-workflow-1-grammar-and-verbs" class="nav-link" data-scroll-target="#workflow-1-grammar-and-verbs"><span class="header-section-number">2.1</span> Workflow 1: Grammar and Verbs</a></li>
+  <li><a href="#key-points-on-diagonalizability" id="toc-key-points-on-diagonalizability" class="nav-link" data-scroll-target="#key-points-on-diagonalizability"><span class="header-section-number">2.1.12</span> Key Points on Diagonalizability</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -187,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean 연세한국어</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MIT Linear Algebra Review</span></h1>
 </div>
 
 
@@ -204,249 +216,344 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="연세한국어1" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="연세한국어1"><span class="header-section-number">1.1</span> 연세한국어1</h2>
-<section id="verb-conjugation-for-questions-아요어요" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="verb-conjugation-for-questions-아요어요"><span class="header-section-number">1.1.1</span> Verb Conjugation for Questions (아요/어요)</h3>
-<ul>
-<li><strong>-까요?</strong>: Used to ask a suggestion or opinion.</li>
-</ul>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>갈까요? (Shall we go?)</li>
-<li>먹을까요? (Shall we eat?)</li>
-<li>할까요? (Shall we do it?)</li>
-</ul>
-</section>
-<section id="verbs-하다-타다-가다-세우다" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="verbs-하다-타다-가다-세우다"><span class="header-section-number">1.1.2</span> Verbs (하다, 타다, 가다, 세우다)</h3>
-<ul>
-<li><strong>세우다</strong> (to stop/park)</li>
-</ul>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>차를 세우다 (to stop the car)</li>
-<li>여기서 세워 주세요. (Please stop here.)</li>
-<li>가게 앞에 세웠어요. (I parked in front of the store.)</li>
-</ul>
-</section>
-<section id="descriptive-form-어서아서" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" class="anchored" data-anchor-id="descriptive-form-어서아서"><span class="header-section-number">1.1.3</span> Descriptive Form (어서/아서)</h3>
-<ul>
-<li><strong>-어서/아서</strong>: Indicates reason or cause, meaning “because.”</li>
-</ul>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>피곤해서 잠을 잤어요. (Because I was tired, I slept.)</li>
-<li>시간이 없어서 못 갔어요. (I couldn’t go because I didn’t have time.)</li>
-<li>배고파서 밥을 먹었어요. (I ate because I was hungry.)</li>
-</ul>
-</section>
-<section id="use-of-로-to-indicate-direction-으로로" class="level3" data-number="1.1.4">
-<h3 data-number="1.1.4" class="anchored" data-anchor-id="use-of-로-to-indicate-direction-으로로"><span class="header-section-number">1.1.4</span> Use of “로” to Indicate Direction (으로/로)</h3>
-<ul>
-<li><strong>으로/로</strong>: Indicates direction or means.</li>
-</ul>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>버스로 갑시다. (Let’s go by bus.)</li>
-<li>학교로 가요. (I’m going to school.)</li>
-<li>오른쪽으로 가세요. (Please go to the right.)</li>
-</ul>
-</section>
-<section id="honorific-form-세요주세요" class="level3" data-number="1.1.5">
-<h3 data-number="1.1.5" class="anchored" data-anchor-id="honorific-form-세요주세요"><span class="header-section-number">1.1.5</span> Honorific Form (세요/주세요)</h3>
-<ul>
-<li><strong>-세요</strong>: Used for making polite requests or instructions.</li>
-</ul>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>들어오세요. (Please come in.)</li>
-<li>앉으세요. (Please sit down.)</li>
-<li>문을 닫아 주세요. (Please close the door.)</li>
-<li><strong>-주세요</strong>: Used to politely ask someone to do something.</li>
-</ul>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>물을 주세요. (Please give me water.)</li>
-<li>책을 읽어 주세요. (Please read the book to me.)</li>
-<li>저를 도와 주세요. (Please help me.)</li>
-</ul>
-</section>
-<section id="verbs-쓰다-시다" class="level3" data-number="1.1.6">
-<h3 data-number="1.1.6" class="anchored" data-anchor-id="verbs-쓰다-시다"><span class="header-section-number">1.1.6</span> Verbs (쓰다, 시다)</h3>
-<p><strong>쓰다</strong> (to write/use/wear)</p>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>편지를 씁니다. (I write a letter.)</li>
-<li>이 컴퓨터를 사용해도 됩니까? (Can I use this computer?)</li>
-<li>모자를 씁니다. (I wear a hat.)</li>
-</ul>
-<p><strong>시다</strong> (to be sour)</p>
-<p><strong>Example Sentences:</strong></p>
-<ul>
-<li>이 레몬은 정말 셔요. (This lemon is really sour.)</li>
-<li>어제 먹은 김치가 좀 셨어요. (The kimchi I ate yesterday was a bit sour.)</li>
-<li>사과보다 레몬이 더 셔요. (Lemons are more sour than apples.)</li>
-</ul>
-</section>
-</section>
-<section id="연세한국어2-1" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="연세한국어2-1"><span class="header-section-number">1.2</span> 연세한국어2-1</h2>
-<section id="grammar-point-언제든지-anytime" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="grammar-point-언제든지-anytime"><span class="header-section-number">1.2.1</span> Grammar Point: 언제든지 (Anytime)</h3>
-<p><strong>Sample Sentences:</strong></p>
-<ul>
-<li>언제든지 제 방에 들어오세요.
-<ul>
-<li>(You can come into my room anytime.)</li>
-</ul></li>
-<li>질문이 있으면 언제든지 물어보세요.
-<ul>
-<li>(If you have any questions, feel free to ask anytime.)</li>
-</ul></li>
-<li>언제든지 휴식을 취할 수 있습니다.
-<ul>
-<li>(You can take a break anytime.)</li>
-</ul></li>
-</ul>
-<p><strong>Verbs Used:</strong></p>
-<ul>
-<li>들어오다 (들어오세요) - to come in</li>
-<li>물어보다 (물어보세요) - to ask</li>
-<li>취하다 (취할 수 있습니다) - to take (a break)</li>
-</ul>
-</section>
-<section id="grammar-point-처음이지만-although-its-the-first-time" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="grammar-point-처음이지만-although-its-the-first-time"><span class="header-section-number">1.2.2</span> Grammar Point: 처음이지만 (Although it’s the first time)</h3>
-<p><strong>Sample Sentences:</strong></p>
-<ul>
-<li>이 도시에 처음 왔지만, 길 찾기가 쉽습니다.
-<ul>
-<li>(It’s my first time in this city, but finding my way is easy.)</li>
-</ul></li>
-<li>처음으로 한국어 수업을 듣지만, 매우 흥미롭습니다.
-<ul>
-<li>(It’s my first time taking a Korean class, but it’s very interesting.)</li>
-</ul></li>
-<li>처음으로 요리를 해보지만, 잘 될 것 같아요.
-<ul>
-<li>(I’m cooking for the first time, but I think it will go well.)</li>
-</ul></li>
-</ul>
-<p><strong>Verbs Used:</strong></p>
-<ul>
-<li>오다 (왔지만) - to come</li>
-<li>듣다 (듣지만) - to listen, to take (a class)</li>
-<li>해보다 (해보지만) - to try (doing something), to attempt</li>
-</ul>
-</section>
-<section id="grammar-point--기-때문에--because" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="grammar-point--기-때문에--because"><span class="header-section-number">1.2.3</span> Grammar Point: -기 때문에 (-because)</h3>
-<p><strong>Sample Sentences:</strong></p>
-<ul>
-<li>오늘은 피곤하기 때문에 일찍 잘 거예요.
-<ul>
-<li>(I will go to bed early today because I’m tired.)</li>
-</ul></li>
-<li>비가 오기 때문에 우산을 가져갔어요.
-<ul>
-<li>(I took an umbrella because it’s raining.)</li>
-</ul></li>
-<li>학생들이 열심히 공부하기 때문에 성적이 좋습니다.
-<ul>
-<li>(The students have good grades because they study hard.)</li>
-</ul></li>
-</ul>
-<p><strong>Verbs Used:</strong></p>
-<ul>
-<li>피곤하다 (피곤하기 때문에) - to be tired</li>
-<li>오다 (오기 때문에) - to come, to fall (rain)</li>
-<li>공부하다 (공부하기 때문에) - to study</li>
-</ul>
-</section>
-<section id="grammar-point-잘-well" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="grammar-point-잘-well"><span class="header-section-number">1.2.4</span> Grammar Point: 잘 (well)</h3>
-<p><strong>Sample Sentences:</strong></p>
-<ul>
-<li>그는 피아노를 잘 칩니다.
-<ul>
-<li>(He plays the piano well.)</li>
-</ul></li>
-<li>우리 팀은 프로젝트를 잘 마쳤습니다.
-<ul>
-<li>(Our team finished the project well.)</li>
-</ul></li>
-<li>그녀는 춤을 정말 잘 춥니다.
-<ul>
-<li>(She dances really well.)</li>
-</ul></li>
-</ul>
-<p><strong>Verbs Used:</strong></p>
-<ul>
-<li>치다 (칩니다) - to play (an instrument)</li>
-<li>마치다 (마쳤습니다) - to finish, to complete</li>
-<li>추다 (춥니다) - to dance</li>
-</ul>
-</section>
-<section id="grammar-point-부드러워서-because-its-gentlesoft" class="level3" data-number="1.2.5">
-<h3 data-number="1.2.5" class="anchored" data-anchor-id="grammar-point-부드러워서-because-its-gentlesoft"><span class="header-section-number">1.2.5</span> Grammar Point: 부드러워서 (because it’s gentle/soft)</h3>
-<p><strong>Sample Sentences:</strong></p>
-<ul>
-<li>그 고양이는 털이 부드러워서 만지기 좋아요.
-<ul>
-<li>(That cat’s fur is soft, so it’s nice to touch.)</li>
-</ul></li>
-<li>그는 성격이 부드러워서 많은 친구가 있습니다.
-<ul>
-<li>(He has many friends because he has a gentle personality.)</li>
-</ul></li>
-<li>음악이 부드러워서 마음이 편해집니다.
-<ul>
-<li>(The music is soft, so it soothes my mind.)</li>
-</ul></li>
-</ul>
-<p><strong>Verbs Used:</strong></p>
-<ul>
-<li>만지다 (만지기 좋아요) - to touch</li>
-<li>있다 (있습니다) - to have, to exist (in the context of possessing a trait)</li>
-<li>편해지다 (편해집니다) - to become comfortable, to relax</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="prompts" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Prompts</h1>
-<section id="workflow-1-grammar-and-verbs" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="workflow-1-grammar-and-verbs"><span class="header-section-number">2.1</span> Workflow 1: Grammar and Verbs</h2>
+<section id="diagonalization" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="diagonalization"><span class="header-section-number">2.1</span> Diagonalization</h2>
+<p><strong>MIT Lecture Video</strong>: <a href="https://www.youtube.com/watch?v=13r9QY6cmjc&amp;list=PL49CF3715CB9EF31D&amp;index=22">22. Diagonalization and Powers of A</a></p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Start a Korean Conversation with iOS Shortcuts
+What does a diagonal matrix look like?
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>I’m going to practice some Korean with you. Please repeat what I say in Korean and make sure you understand and correct any grammar errors if you find any, and keep your answer succinct. Don’t ask me “what else can I help you?” or “keep going”.</p>
-<p>…</p>
-<ul>
-<li>Please summarize the grammar points in our conversation in Korean.</li>
-<li>Please construct sample sentences using the grammar points you summarized for me to improve my reading ability and the understanding of those grammar points.</li>
-<li>Please give me three sample sentences for each grammar point.</li>
-<li>Can you also gave me the verbs in the sample sentences for me to study as well</li>
-</ul>
-<p><strong>Wrap-up</strong></p>
-<p>Let’s wrap up this conversation. Please provide the following information in the markdown format.</p>
+<p>A diagonal matrix is a matrix in which the entries outside the main diagonal are all zero. Here is an example of a diagonal matrix:</p>
+<span class="math display">\[\begin{pmatrix}
+5 &amp; 0 &amp; 0 \\
+0 &amp; 3 &amp; 0 \\
+0 &amp; 0 &amp; 7 \\
+\end{pmatrix}\]</span>
+<p>In this matrix, the diagonal elements are 5, 3, and 7, and all the off-diagonal elements are 0. This is the defining characteristic of a diagonal matrix.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What does it mean by “diagonalizable” in linear algebra?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In linear algebra, a matrix is said to be “diagonalizable” if it can be transformed into a diagonal matrix. Specifically, a square matrix (A) is diagonalizable if there exists an invertible matrix (P) and a diagonal matrix (D) such that:</p>
+<p><span class="math display">\[
+P^{-1} A P = D
+\]</span></p>
+<p>where (D) is a diagonal matrix. This means that the matrix (A) can be expressed in a form where all the elements outside the main diagonal are zero.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is the relationship between Diagonalizable Matrices, Eigenvalues, and Eigenvectors?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="diagonalizable-matrices" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="diagonalizable-matrices"><span class="header-section-number">2.1.1</span> Diagonalizable Matrices</h3>
+<p>A matrix ( A ) is said to be diagonalizable if it can be transformed into a diagonal matrix ( D ). This means there exists an invertible matrix ( P ) and a diagonal matrix ( D ) such that:</p>
+<p><span class="math display">\[
+P^{-1} A P = D
+\]</span></p>
+</section>
+<section id="eigenvalues-and-eigenvectors" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors"><span class="header-section-number">2.1.2</span> Eigenvalues and Eigenvectors</h3>
+<p>Eigenvalues and eigenvectors are key concepts related to diagonalizable matrices:</p>
 <ol type="1">
-<li>grammar points</li>
-<li>3 sample sentences for each grammar points.</li>
-<li>verbs used in the sample sentences. You can re-use the ones that you gave me above.</li>
+<li><p><strong>Eigenvalues <span class="math inline">\(\lambda\)</span></strong>: These are the values such that for a given matrix ( A ) and a non-zero vector ( ), the following equation holds: <span class="math display">\[
+A \mathbf{v} = \lambda \mathbf{v}
+\]</span></p></li>
+<li><p><strong>Eigenvectors <span class="math inline">\(\mathbf{v}\)</span></strong>: These are the non-zero vectors that satisfy the eigenvalue equation above. Each eigenvector corresponds to an eigenvalue.</p></li>
 </ol>
+</section>
+<section id="connecting-the-concepts" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="connecting-the-concepts"><span class="header-section-number">2.1.3</span> Connecting the Concepts</h3>
+<ol type="1">
+<li><p><strong>Diagonalization and Eigenvalues</strong>: The diagonal elements of the matrix ( D ) are the eigenvalues of the matrix ( A ).</p></li>
+<li><p><strong>Matrix ( P ) and Eigenvectors</strong>: The columns of the matrix ( P ) are the eigenvectors of the matrix ( A ). If ( A ) has ( n ) linearly independent eigenvectors, then these eigenvectors form the columns of the invertible matrix ( P ).</p></li>
+</ol>
+</section>
+<section id="summary" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.1.4</span> Summary</h3>
+<ul>
+<li>A matrix ( A ) is diagonalizable if it has enough linearly independent eigenvectors to form the matrix ( P ).</li>
+<li>The diagonal matrix ( D ) contains the eigenvalues of ( A ) along its diagonal.</li>
+<li>The transformation <span class="math inline">\(P^{-1} A P = D\)</span> uses the eigenvectors (forming ( P )) to diagonalize ( A ).</li>
+</ul>
+<p>This relationship is crucial because diagonalizable matrices are easier to work with, especially in simplifying computations such as matrix powers and exponentials.</p>
+</section>
 </div>
 </div>
-<p>Then you can use “MarkDownload” to send it to Obsidian or copy as Markdown * Right click -&gt; MarkDownload -&gt; Copy Selection as Markdown</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What are the advantages of diagonalization?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Diagonalizing a matrix provides numerous benefits, making it a powerful tool in linear algebra. Here are some of the primary advantages:</p>
+<section id="simplification-of-matrix-operations" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="simplification-of-matrix-operations"><span class="header-section-number">2.1.5</span> Simplification of Matrix Operations</h3>
+<ol type="1">
+<li><p><strong>Matrix Powers</strong>: Diagonal matrices are much easier to raise to a power. If ( A ) is diagonalizable, and we have ( P^{-1} A P = D ), then:</p>
+<p><span class="math display">\[
+A^k = P D^k P^{-1}
+\]</span></p>
+<p>where ( D^k ) is simply the diagonal matrix ( D ) with each diagonal element raised to the power ( k ).</p></li>
+<li><p><strong>Matrix Functions</strong>: Functions of matrices, such as the matrix exponential, can be computed more easily when the matrix is diagonal. For example, the exponential of ( A ) is given by:</p>
+<p><span class="math display">\[
+e^A = P e^D P^{-1}
+\]</span></p>
+<p>where ( e^D ) is the exponential of the diagonal matrix ( D ), computed by taking the exponential of each diagonal element.</p></li>
+</ol>
+</section>
+<section id="eigenvalue-analysis" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="eigenvalue-analysis"><span class="header-section-number">2.1.6</span> Eigenvalue Analysis</h3>
+<ol start="3" type="1">
+<li><p><strong>Understanding Dynamics</strong>: In systems of differential equations, diagonalization helps to decouple the system, making it easier to analyze and solve. The eigenvalues can indicate stability and the nature of the system’s behavior.</p></li>
+<li><p><strong>Quantum Mechanics</strong>: In quantum mechanics, diagonalization is used to simplify the Hamiltonian operator, allowing for easier computation of the system’s energy levels and states.</p></li>
+</ol>
+</section>
+<section id="computational-efficiency" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="computational-efficiency"><span class="header-section-number">2.1.7</span> Computational Efficiency</h3>
+<ol start="5" type="1">
+<li><p><strong>Efficient Computations</strong>: Algorithms that utilize diagonalization can be more computationally efficient for large matrices, as operations on diagonal matrices are simpler and faster.</p></li>
+<li><p><strong>Simplification in Engineering and Physics</strong>: Many problems in engineering and physics can be reduced to diagonalizable forms, simplifying both theoretical analysis and practical computations.</p></li>
+</ol>
+</section>
+<section id="insight-into-matrix-structure" class="level3" data-number="2.1.8">
+<h3 data-number="2.1.8" class="anchored" data-anchor-id="insight-into-matrix-structure"><span class="header-section-number">2.1.8</span> Insight into Matrix Structure</h3>
+<ol start="7" type="1">
+<li><strong>Geometric Interpretation</strong>: Diagonalization provides insights into the geometric structure of a matrix, revealing important properties through its eigenvalues and eigenvectors.</li>
+</ol>
+</section>
+<section id="summary-1" class="level3" data-number="2.1.9">
+<h3 data-number="2.1.9" class="anchored" data-anchor-id="summary-1"><span class="header-section-number">2.1.9</span> Summary</h3>
+<ul>
+<li><strong>Matrix Powers</strong>: Easier computation of powers and functions of matrices.</li>
+<li><strong>System Dynamics</strong>: Simplifies analysis of dynamic systems.</li>
+<li><strong>Efficiency</strong>: Increases computational efficiency for large matrices.</li>
+<li><strong>Insights</strong>: Provides geometric and structural insights into matrices.</li>
+</ul>
+<p>These advantages highlight why diagonalization is a valuable technique in various mathematical, engineering, and physical applications.</p>
+</section>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Give me a concrete example to showcase the advantages of diagonalization
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Diagonalization offers numerous benefits, especially in simplifying matrix computations. Let’s demonstrate this with a concrete example.</p>
+<section id="example-diagonalizing-a-matrix" class="level3" data-number="2.1.10">
+<h3 data-number="2.1.10" class="anchored" data-anchor-id="example-diagonalizing-a-matrix"><span class="header-section-number">2.1.10</span> Example: Diagonalizing a Matrix</h3>
+<p>Consider the matrix <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+A = \begin{pmatrix}
+4 &amp; 1 \\
+2 &amp; 3
+\end{pmatrix}
+\]</span></p>
+<section id="step-1-find-the-eigenvalues" class="level4" data-number="2.1.10.1">
+<h4 data-number="2.1.10.1" class="anchored" data-anchor-id="step-1-find-the-eigenvalues"><span class="header-section-number">2.1.10.1</span> Step 1: Find the Eigenvalues</h4>
+<p>Solve the characteristic equation <span class="math inline">\(\det(A - \lambda I) = 0\)</span>:</p>
+<p><span class="math display">\[
+\det \begin{pmatrix}
+4 - \lambda &amp; 1 \\
+2 &amp; 3 - \lambda
+\end{pmatrix} = (4 - \lambda)(3 - \lambda) - 2 = \lambda^2 - 7\lambda + 10 = 0
+\]</span></p>
+<p>The eigenvalues are the roots of the characteristic polynomial:</p>
+<p><span class="math display">\[
+\lambda^2 - 7\lambda + 10 = 0
+\]</span></p>
+<p>Solving for <span class="math inline">\(\lambda\)</span>:</p>
+<p><span class="math display">\[
+\lambda = 5 \quad \text{and} \quad \lambda = 2
+\]</span></p>
+</section>
+<section id="step-2-find-the-eigenvectors" class="level4" data-number="2.1.10.2">
+<h4 data-number="2.1.10.2" class="anchored" data-anchor-id="step-2-find-the-eigenvectors"><span class="header-section-number">2.1.10.2</span> Step 2: Find the Eigenvectors</h4>
+<p>For <span class="math inline">\(\lambda = 5\)</span>:</p>
+<p><span class="math display">\[
+(A - 5I) \mathbf{v} = 0
+\]</span></p>
+<p><span class="math display">\[
+\begin{pmatrix}
+-1 &amp; 1 \\
+2 &amp; -2
+\end{pmatrix} \begin{pmatrix}
+x \\
+y
+\end{pmatrix} = 0
+\]</span></p>
+<p>Solving, we get <span class="math inline">\(\mathbf{v}_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</span>.</p>
+<p>For <span class="math inline">\(\lambda = 2\)</span>:</p>
+<p><span class="math display">\[
+(A - 2I) \mathbf{v} = 0
+\]</span></p>
+<p><span class="math display">\[
+\begin{pmatrix}
+2 &amp; 1 \\
+2 &amp; 1
+\end{pmatrix} \begin{pmatrix}
+x \\
+y
+\end{pmatrix} = 0
+\]</span></p>
+<p>Solving, we get <span class="math inline">\(\mathbf{v}_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}\)</span>.</p>
+</section>
+<section id="step-3-form-the-matrices-p-and-d" class="level4" data-number="2.1.10.3">
+<h4 data-number="2.1.10.3" class="anchored" data-anchor-id="step-3-form-the-matrices-p-and-d"><span class="header-section-number">2.1.10.3</span> Step 3: Form the Matrices <span class="math inline">\(P\)</span> and <span class="math inline">\(D\)</span></h4>
+<p><span class="math display">\[
+P = \begin{pmatrix}
+1 &amp; 1 \\
+1 &amp; -2
+\end{pmatrix}, \quad D = \begin{pmatrix}
+5 &amp; 0 \\
+0 &amp; 2
+\end{pmatrix}
+\]</span></p>
+</section>
+<section id="step-4-verify-diagonalization" class="level4" data-number="2.1.10.4">
+<h4 data-number="2.1.10.4" class="anchored" data-anchor-id="step-4-verify-diagonalization"><span class="header-section-number">2.1.10.4</span> Step 4: Verify Diagonalization</h4>
+<p><span class="math display">\[
+P^{-1} A P = D
+\]</span></p>
+<p>Computing <span class="math inline">\(P^{-1}\)</span>:</p>
+<p><span class="math display">\[
+P^{-1} = \frac{1}{\det(P)} \begin{pmatrix}
+-2 &amp; -1 \\
+-1 &amp; 1
+\end{pmatrix} = \frac{1}{-3} \begin{pmatrix}
+-2 &amp; -1 \\
+-1 &amp; 1
+\end{pmatrix} = \begin{pmatrix}
+\frac{2}{3} &amp; \frac{1}{3} \\
+\frac{1}{3} &amp; -\frac{1}{3}
+\end{pmatrix}
+\]</span></p>
+<p>Now,</p>
+<p><span class="math display">\[
+P^{-1} A P = \begin{pmatrix}
+\frac{2}{3} &amp; \frac{1}{3} \\
+\frac{1}{3} &amp; -\frac{1}{3}
+\end{pmatrix} \begin{pmatrix}
+4 &amp; 1 \\
+2 &amp; 3
+\end{pmatrix} \begin{pmatrix}
+1 &amp; 1 \\
+1 &amp; -2
+\end{pmatrix} = \begin{pmatrix}
+5 &amp; 0 \\
+0 &amp; 2
+\end{pmatrix} = D
+\]</span></p>
+</section>
+</section>
+<section id="application-computing-a3" class="level3" data-number="2.1.11">
+<h3 data-number="2.1.11" class="anchored" data-anchor-id="application-computing-a3"><span class="header-section-number">2.1.11</span> Application: Computing <span class="math inline">\(A^3\)</span></h3>
+<p>Using the diagonalization, we can compute <span class="math inline">\(A^3\)</span> easily:</p>
+<p><span class="math display">\[
+A^3 = P D^3 P^{-1}
+\]</span></p>
+<p>First, compute <span class="math inline">\(D^3\)</span>:</p>
+<p><span class="math display">\[
+D^3 = \begin{pmatrix}
+5 &amp; 0 \\
+0 &amp; 2
+\end{pmatrix}^3 = \begin{pmatrix}
+5^3 &amp; 0 \\
+0 &amp; 2^3
+\end{pmatrix} = \begin{pmatrix}
+125 &amp; 0 \\
+0 &amp; 8
+\end{pmatrix}
+\]</span></p>
+<p>Then,</p>
+<p><span class="math display">\[
+A^3 = P D^3 P^{-1} = \begin{pmatrix}
+1 &amp; 1 \\
+1 &amp; -2
+\end{pmatrix} \begin{pmatrix}
+125 &amp; 0 \\
+0 &amp; 8
+\end{pmatrix} \begin{pmatrix}
+\frac{2}{3} &amp; \frac{1}{3} \\
+\frac{1}{3} &amp; -\frac{1}{3}
+\end{pmatrix}
+\]</span></p>
+<p><span class="math display">\[
+= \begin{pmatrix}
+1 &amp; 1 \\
+1 &amp; -2
+\end{pmatrix} \begin{pmatrix}
+\frac{250}{3} &amp; \frac{125}{3} \\
+\frac{8}{3} &amp; -\frac{8}{3}
+\end{pmatrix}
+\]</span></p>
+<p><span class="math display">\[
+= \begin{pmatrix}
+\frac{258}{3} &amp; \frac{117}{3} \\
+\frac{234}{3} &amp; \frac{141}{3}
+\end{pmatrix} = \begin{pmatrix}
+86 &amp; 39 \\
+78 &amp; 47
+\end{pmatrix}
+\]</span></p>
+<p>This demonstrates how diagonalization simplifies the computation of powers of matrices.</p>
+</section>
+</div>
+</div>
+</div>
+<section id="key-points-on-diagonalizability" class="level3" data-number="2.1.12">
+<h3 data-number="2.1.12" class="anchored" data-anchor-id="key-points-on-diagonalizability"><span class="header-section-number">2.1.12</span> Key Points on Diagonalizability</h3>
+<ol type="1">
+<li><p><strong>Eigenvalues and Eigenvectors</strong>: A matrix (A) is diagonalizable if and only if it has enough linearly independent eigenvectors to form the columns of the matrix (P). The diagonal elements of (D) are the eigenvalues of (A).</p></li>
+<li><p><strong>Similarity Transformation</strong>: The matrix (P) in the equation (P^{-1}AP = D) is formed from the eigenvectors of (A). This is known as a similarity transformation.</p></li>
+<li><p><strong>Simplification of Computations</strong>: Diagonal matrices are easier to work with, especially for raising matrices to powers and computing functions of matrices, because operations on diagonal matrices are straightforward.</p></li>
+<li><p><strong>Conditions for Diagonalizability</strong>: Not all matrices are diagonalizable. For instance, a matrix is diagonalizable if it has (n) linearly independent eigenvectors, where (n) is the size of the matrix.</p></li>
+<li><p><strong>Geometric Multiplicity</strong>: The geometric multiplicity of each eigenvalue (the number of linearly independent eigenvectors associated with it) must equal its algebraic multiplicity (the number of times it appears as a root of the characteristic polynomial) for the matrix to be diagonalizable.</p></li>
+</ol>
+<p>In summary, a matrix being diagonalizable means it can be represented in a simpler form (a diagonal matrix) through a similarity transformation, making many matrix computations more straightforward and highlighting the structure given by the matrix’s eigenvalues and eigenvectors.</p>
 
 
 </section>
@@ -1008,13 +1115,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./korean.html" class="pagination-link" aria-label="Learn Korean 연세한국어">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Learn Korean 연세한국어</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./java.html" class="pagination-link" aria-label="java.html">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">java.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
