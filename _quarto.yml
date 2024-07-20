@@ -31,7 +31,7 @@ format:
     # good choices: lumen,zephyr
     # https://quarto.org/docs/output-formats/html-themes.html
     fontsize: 1em
-    linestretch: 1.1
+    linestretch: 1.2
     grid:
       sidebar-width: 300px
       body-width: 1000px
