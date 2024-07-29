@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -70,12 +104,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://hypothes.is/embed.js"></script>
-<script>
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    document.body.classList.add('hypothesis-enabled');
-  });
-</script>
 
 
 </head>
@@ -158,31 +186,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#netflix-泪之女王" id="toc-netflix-泪之女王" class="nav-link active" data-scroll-target="#netflix-泪之女王"><span class="header-section-number">2</span> Netflix 泪之女王</a>
+  <li><a href="#netflix-继承者们" id="toc-netflix-继承者们" class="nav-link active" data-scroll-target="#netflix-继承者们"><span class="header-section-number">2</span> Netflix 继承者们</a>
   <ul class="collapse">
-  <li><a href="#제11화" id="toc-제11화" class="nav-link" data-scroll-target="#제11화"><span class="header-section-number">2.1</span> 제11화</a></li>
+  <li><a href="#제1화" id="toc-제1화" class="nav-link" data-scroll-target="#제1화"><span class="header-section-number">2.1</span> 제1화</a></li>
   </ul></li>
-  <li><a href="#哑巴韩国语入门" id="toc-哑巴韩国语入门" class="nav-link" data-scroll-target="#哑巴韩国语入门"><span class="header-section-number">3</span> 哑巴韩国语入门</a>
+  <li><a href="#netflix-泪之女王" id="toc-netflix-泪之女王" class="nav-link" data-scroll-target="#netflix-泪之女王"><span class="header-section-number">3</span> Netflix 泪之女王</a>
   <ul class="collapse">
-  <li><a href="#야-돼-musthave-to" id="toc-야-돼-musthave-to" class="nav-link" data-scroll-target="#야-돼-musthave-to"><span class="header-section-number">3.1</span> 야 돼 (must/have to)</a></li>
-  <li><a href="#도-돼-maycan" id="toc-도-돼-maycan" class="nav-link" data-scroll-target="#도-돼-maycan"><span class="header-section-number">3.2</span> 도 돼 (may/can)</a></li>
+  <li><a href="#제11화" id="toc-제11화" class="nav-link" data-scroll-target="#제11화"><span class="header-section-number">3.1</span> 제11화</a></li>
   </ul></li>
-  <li><a href="#연세한국어1-2" id="toc-연세한국어1-2" class="nav-link" data-scroll-target="#연세한국어1-2"><span class="header-section-number">4</span> 연세한국어1-2</a>
+  <li><a href="#哑巴韩国语入门" id="toc-哑巴韩国语入门" class="nav-link" data-scroll-target="#哑巴韩国语入门"><span class="header-section-number">4</span> 哑巴韩国语入门</a>
   <ul class="collapse">
-  <li><a href="#verb-conjugation-for-questions-아요어요" id="toc-verb-conjugation-for-questions-아요어요" class="nav-link" data-scroll-target="#verb-conjugation-for-questions-아요어요"><span class="header-section-number">4.1</span> Verb Conjugation for Questions (아요/어요)</a></li>
-  <li><a href="#verbs-하다-타다-가다-세우다" id="toc-verbs-하다-타다-가다-세우다" class="nav-link" data-scroll-target="#verbs-하다-타다-가다-세우다"><span class="header-section-number">4.2</span> Verbs (하다, 타다, 가다, 세우다)</a></li>
-  <li><a href="#descriptive-form-어서아서" id="toc-descriptive-form-어서아서" class="nav-link" data-scroll-target="#descriptive-form-어서아서"><span class="header-section-number">4.3</span> Descriptive Form (어서/아서)</a></li>
-  <li><a href="#use-of-로-to-indicate-direction-으로로" id="toc-use-of-로-to-indicate-direction-으로로" class="nav-link" data-scroll-target="#use-of-로-to-indicate-direction-으로로"><span class="header-section-number">4.4</span> Use of “로” to Indicate Direction (으로/로)</a></li>
-  <li><a href="#honorific-form-세요주세요" id="toc-honorific-form-세요주세요" class="nav-link" data-scroll-target="#honorific-form-세요주세요"><span class="header-section-number">4.5</span> Honorific Form (세요/주세요)</a></li>
-  <li><a href="#verbs-쓰다-시다" id="toc-verbs-쓰다-시다" class="nav-link" data-scroll-target="#verbs-쓰다-시다"><span class="header-section-number">4.6</span> Verbs (쓰다, 시다)</a></li>
+  <li><a href="#야-돼-musthave-to" id="toc-야-돼-musthave-to" class="nav-link" data-scroll-target="#야-돼-musthave-to"><span class="header-section-number">4.1</span> 야 돼 (must/have to)</a></li>
+  <li><a href="#도-돼-maycan" id="toc-도-돼-maycan" class="nav-link" data-scroll-target="#도-돼-maycan"><span class="header-section-number">4.2</span> 도 돼 (may/can)</a></li>
   </ul></li>
-  <li><a href="#연세한국어2-1" id="toc-연세한국어2-1" class="nav-link" data-scroll-target="#연세한국어2-1"><span class="header-section-number">5</span> 연세한국어2-1</a>
+  <li><a href="#연세한국어1-2" id="toc-연세한국어1-2" class="nav-link" data-scroll-target="#연세한국어1-2"><span class="header-section-number">5</span> 연세한국어1-2</a>
   <ul class="collapse">
-  <li><a href="#grammar-point-언제든지-anytime" id="toc-grammar-point-언제든지-anytime" class="nav-link" data-scroll-target="#grammar-point-언제든지-anytime"><span class="header-section-number">5.1</span> Grammar Point: 언제든지 (Anytime)</a></li>
-  <li><a href="#grammar-point-처음이지만-although-its-the-first-time" id="toc-grammar-point-처음이지만-although-its-the-first-time" class="nav-link" data-scroll-target="#grammar-point-처음이지만-although-its-the-first-time"><span class="header-section-number">5.2</span> Grammar Point: 처음이지만 (Although it’s the first time)</a></li>
-  <li><a href="#grammar-point--기-때문에--because" id="toc-grammar-point--기-때문에--because" class="nav-link" data-scroll-target="#grammar-point--기-때문에--because"><span class="header-section-number">5.3</span> Grammar Point: -기 때문에 (-because)</a></li>
-  <li><a href="#grammar-point-잘-well" id="toc-grammar-point-잘-well" class="nav-link" data-scroll-target="#grammar-point-잘-well"><span class="header-section-number">5.4</span> Grammar Point: 잘 (well)</a></li>
-  <li><a href="#grammar-point-부드러워서-because-its-gentlesoft" id="toc-grammar-point-부드러워서-because-its-gentlesoft" class="nav-link" data-scroll-target="#grammar-point-부드러워서-because-its-gentlesoft"><span class="header-section-number">5.5</span> Grammar Point: 부드러워서 (because it’s gentle/soft)</a></li>
+  <li><a href="#verb-conjugation-for-questions-아요어요" id="toc-verb-conjugation-for-questions-아요어요" class="nav-link" data-scroll-target="#verb-conjugation-for-questions-아요어요"><span class="header-section-number">5.1</span> Verb Conjugation for Questions (아요/어요)</a></li>
+  <li><a href="#verbs-하다-타다-가다-세우다" id="toc-verbs-하다-타다-가다-세우다" class="nav-link" data-scroll-target="#verbs-하다-타다-가다-세우다"><span class="header-section-number">5.2</span> Verbs (하다, 타다, 가다, 세우다)</a></li>
+  <li><a href="#descriptive-form-어서아서" id="toc-descriptive-form-어서아서" class="nav-link" data-scroll-target="#descriptive-form-어서아서"><span class="header-section-number">5.3</span> Descriptive Form (어서/아서)</a></li>
+  <li><a href="#use-of-로-to-indicate-direction-으로로" id="toc-use-of-로-to-indicate-direction-으로로" class="nav-link" data-scroll-target="#use-of-로-to-indicate-direction-으로로"><span class="header-section-number">5.4</span> Use of “로” to Indicate Direction (으로/로)</a></li>
+  <li><a href="#honorific-form-세요주세요" id="toc-honorific-form-세요주세요" class="nav-link" data-scroll-target="#honorific-form-세요주세요"><span class="header-section-number">5.5</span> Honorific Form (세요/주세요)</a></li>
+  <li><a href="#verbs-쓰다-시다" id="toc-verbs-쓰다-시다" class="nav-link" data-scroll-target="#verbs-쓰다-시다"><span class="header-section-number">5.6</span> Verbs (쓰다, 시다)</a></li>
+  </ul></li>
+  <li><a href="#연세한국어2-1" id="toc-연세한국어2-1" class="nav-link" data-scroll-target="#연세한국어2-1"><span class="header-section-number">6</span> 연세한국어2-1</a>
+  <ul class="collapse">
+  <li><a href="#grammar-point-언제든지-anytime" id="toc-grammar-point-언제든지-anytime" class="nav-link" data-scroll-target="#grammar-point-언제든지-anytime"><span class="header-section-number">6.1</span> Grammar Point: 언제든지 (Anytime)</a></li>
+  <li><a href="#grammar-point-처음이지만-although-its-the-first-time" id="toc-grammar-point-처음이지만-although-its-the-first-time" class="nav-link" data-scroll-target="#grammar-point-처음이지만-although-its-the-first-time"><span class="header-section-number">6.2</span> Grammar Point: 처음이지만 (Although it’s the first time)</a></li>
+  <li><a href="#grammar-point--기-때문에--because" id="toc-grammar-point--기-때문에--because" class="nav-link" data-scroll-target="#grammar-point--기-때문에--because"><span class="header-section-number">6.3</span> Grammar Point: -기 때문에 (-because)</a></li>
+  <li><a href="#grammar-point-잘-well" id="toc-grammar-point-잘-well" class="nav-link" data-scroll-target="#grammar-point-잘-well"><span class="header-section-number">6.4</span> Grammar Point: 잘 (well)</a></li>
+  <li><a href="#grammar-point-부드러워서-because-its-gentlesoft" id="toc-grammar-point-부드러워서-because-its-gentlesoft" class="nav-link" data-scroll-target="#grammar-point-부드러워서-because-its-gentlesoft"><span class="header-section-number">6.5</span> Grammar Point: 부드러워서 (because it’s gentle/soft)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -215,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt：Start a Korean Conversation with iOS Shortcuts
+Prompt 1: Start a Korean Conversation with iOS Shortcuts
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -245,11 +277,51 @@ Prompt：Start a Korean Conversation with iOS Shortcuts
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdown
+Prompt 2: Start a Conversation about Korean Drama and Transcript
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>I am a korean beginner learner. I will give you some sentences in Korean from drama.</p>
+<p>Please translate them first, then highlight 1 important grammar point with 2 sample sentences, and maximum 2 advance words (if any), and also provide 2 sample sentences.</p>
+<p>All the responses should be in Chinese.</p>
+<p>Here is the first sentence: ____________</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prompt 3: Summarize Grammar and Convert for Quarto
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>请总结这个对话内的所有例句，准备成markdown code， 方便我粘贴到quarto 格式的例子如下 请重新整理，例子如下：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>:::: {.callout-tip collapse="true"}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### **아무도 없는 거 아니야?**  </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>_“不会是一个人也没有吧？”_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>此处为重要语法点，词汇，以及例句。不要准备新的，只要把这个对话里的重新整理即可。</p>
+<p>请给我markdown code, so I can copy and paste.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdown
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Right click -&gt; MarkDownload -&gt; Copy Selection as Markdown</li>
@@ -257,12 +329,921 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 </div>
-<section id="netflix-泪之女王" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Netflix 泪之女王</h1>
-<section id="제11화" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="제11화"><span class="header-section-number">2.1</span> 제11화</h2>
+<section id="netflix-继承者们" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Netflix 继承者们</h1>
+<section id="제1화" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="제1화"><span class="header-section-number">2.1</span> 제1화</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>영수증은 박스 위에 있습니다</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“收据在盒子上面。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>에 있다/없다：表示存在或不存在的状态。에 있다表示“在某地存在”，에 없다表示“在某地不存在”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>가방이 의자 아래에 있습니다.（包在椅子下面。）</li>
+<li>사람이 집에 없습니다.（家里没有人。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 영수증（收据）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>영수증을 잃어버렸어요.（我丢了收据。）</li>
+<li>이 물건의 영수증을 보여주세요.（请给我看一下这件商品的收据。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>그러니까 너도 빨리 남친 만들어</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“所以你也快点交男朋友吧。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)니까：表示原因或理由，相当于“因为……所以……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>날씨가 좋으니까 산책하러 갑시다.（因为天气好，所以去散步吧。）</li>
+<li>배가 고프니까 밥 먹으러 가요.（因为肚子饿，所以去吃饭吧。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 남친（남자친구 的缩写，男朋友）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>남친과 함께 영화를 봤어요.（和男朋友一起看了电影。）</li>
+<li>남친이 선물을 줬어요.（男朋友送了我礼物。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>주문할래? 아님 나가 줄래?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“你要点餐吗？还是你要出去？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)ㄹ래요：用于动词后，表示意图或意愿，相当于“要……吗？”或“想要……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>같이 갈래요?（要一起去吗？）</li>
+<li>뭐 먹을래요?（你想吃什么？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 주문하다（点餐）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>음식은 인터넷으로 주문했어요.（食物是在网上点的。）</li>
+<li>지금 주문할 수 있어요?（现在可以点餐吗？）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>찬영아, 가자 너 내일 떠나는데</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“灿荣，走吧，你明天要走了。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>는데/은데/ㄴ데：用于动词或形容词后，表示背景、对比或提示下文，相当于“……但……”或“……而……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>비가 오는데 우산을 가져가세요.（下雨了，带上伞吧。）</li>
+<li>나는 학생인데 친구는 선생님이에요.（我是学生，而朋友是老师。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 떠나다（离开）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 어제 서울을 떠났어요.（他昨天离开了首尔。）</li>
+<li>나는 내일 아침에 떠날 거예요.（我明天早上要走。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>차은상 싫어 정말 싫어, 완전 싫어, 매우 싫어!</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“车恩尚讨厌，真的讨厌，完全讨厌，非常讨厌！”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>싫어하다：表示讨厌或不喜欢，用于描述对某事物或某人的负面情感。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>나는 매운 음식을 싫어해요.（我讨厌辣的食物。）</li>
+<li>그는 아침에 일찍 일어나는 것을 싫어해요.（他讨厌早上早起。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 완전（完全）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>이 영화는 완전 재미있어요.（这部电影完全有趣。）</li>
+<li>오늘 하루가 완전 피곤했어요.（今天一天完全累坏了。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>학교는 잘 다니고 있어?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“学校上得好吗？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>고 있다：表示正在进行的动作，相当于“正在……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>지금 책을 읽고 있어요.（现在正在看书。）</li>
+<li>친구와 통화하고 있어요.（正在和朋友通话。）</li>
+</ol>
+<p><strong>高级词汇：</strong></p>
+<ul>
+<li>다니다（上，去，来回）</li>
+</ul>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 매일 도서관에 다녀요.（他每天去图书馆。）</li>
+<li>나는 이 회사에 3년 동안 다녔어요.（我在这家公司上班已经三年了。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>돈 좀 보태실래요?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“能帮忙凑点钱吗？”</em></p>
+<p><strong>重要语法点：</strong> - (으)실래요：用于动词后，表示礼貌的提议或询问，相当于“您要……吗？”。</p>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>같이 가실래요?（您要一起去吗？）</li>
+<li>이걸 드실래요?（您要吃这个吗？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 보태다（凑，加）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>친구들이 돈을 보태서 선물을 샀어요.（朋友们凑钱买了礼物。）</li>
+<li>그가 내게 돈을 좀 보태줬어요.（他给我凑了点钱。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>미국에 있는 아들이 계속 전화를 안 받는 모양이에요</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“在美国的儿子好像一直不接电话。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>는데/은데/ㄴ데：用于动词或形容词后，表示背景、对比或提示下文，相当于“……但……”或“……而……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>비가 오는 모양이에요.（外面好像在下雨。）</li>
+<li>그는 오늘 바쁜 모양이에요.（他今天好像很忙。）</li>
+</ol>
+<p><strong>高级词汇：</strong></p>
+<ul>
+<li>계속（继续，一直）</li>
+<li>받다（接，接受）</li>
+</ul>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 계속 일하고 있어요.（他一直在工作。）</li>
+<li>그녀는 나의 전화를 받지 않았어요.（她没接我的电话。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>사장님 들어오셨어요</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“社长进来了。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)셨어요：用于动词或形容词后，表示敬语的过去式，相当于“……了”或“……过了”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>할아버지께서 식사하셨어요.（爷爷吃过饭了。）</li>
+<li>선생님께서 말씀하셨어요.（老师说过话了。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 들어오다（进来）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 방에 들어왔어요.（他进了房间。）</li>
+<li>손님이 가게에 들어오셨어요.（客人进了店。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>점심을 늦게 먹었어요</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“午饭吃晚了。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>았/었어요：用于动词或形容词后，表示过去式，相当于“……了”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>어제 친구를 만났어요.（昨天见了朋友。）</li>
+<li>우리는 영화를 봤어요.（我们看了电影。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 늦다（晚）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>회의에 늦었어요.（开会迟到了。）</li>
+<li>버스가 늦게 왔어요.（公交车来得很晚。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>오늘 제 방 청소 누가 하셨어요?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“今天谁打扫了我的房间？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)셨어요：用于动词或形容词后，表示敬语的过去式，相当于“……了”或“……过了”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>할머니께서 아침을 만드셨어요.（奶奶做了早餐。）</li>
+<li>선생님께서 그 책을 읽으셨어요.（老师读了那本</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>다시 하세요</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“请再做一次。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)세요：用于动词后，表示对听话人的尊敬命令或请求，相当于“请……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>앉으세요.（请坐。）</li>
+<li>이쪽으로 오세요.（请到这边来。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 다시（再，重新）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그 말을 다시 해주세요.（请再说一次。）</li>
+<li>숙제를 다시 해야 해요.（作业要重新做一次。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>내가 그 집 음식물 쓰레기통이야?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“我是那家的垃圾桶吗？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>이야/야：用于名词后，表示非正式的疑问句或陈述句的终结词尾，相当于“是……吗？”或“是……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>너 학생이야?（你是学生吗？）</li>
+<li>여기는 우리 집이야.（这里是我家。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 음식물 쓰레기통（食物垃圾桶）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>음식물 쓰레기통에 음식을 버리지 마세요.（不要把食物扔进垃圾桶。）</li>
+<li>이 음식물 쓰레기통은 냄새가 많이 나요.（这个食物垃圾桶味道很大。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>먹고사는 거보다 더 중요한 게 어디 있어?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“比起吃饭和生活，还有什么更重要的？”</em></p>
+<p><strong>重要语法点：</strong> - 보다：用于名词后，表示比较，相当于“比……”。</p>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>이 책이 저 책보다 더 재미있어요.（这本书比那本书更有趣。）</li>
+<li>나는 언니보다 키가 커요.（我比姐姐高。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 중요하다（重要）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>이 일은 정말 중요해요.（这件事真的很重要。）</li>
+<li>건강이 가장 중요해요.（健康是最重要的。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>알았어 다음부터는 안 가져와</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“知道了，下次不会带来了。”</em></p>
+<p><strong>重要语法点：</strong> - 부터：用于名词后，表示起点，相当于“从……”。</p>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>지금부터 시작해요.（从现在开始。）</li>
+<li>내일부터 다이어트를 할 거예요.（从明天开始我要减肥。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 가져오다（带来）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 나에게 책을 가져왔어요.（他给我带来了书。）</li>
+<li>물 좀 가져와 주세요.（请带点水来。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>미국? 언니한테 돈 보내게?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“美国？要给姐姐寄钱吗？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>게：用于动词词干后，表示目的或意图，相当于“为了……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>일찍 일어나게 알람을 맞췄어요.（为了早起，我设了闹钟。）</li>
+<li>건강하게 먹으려고 노력해요.（为了健康，我努力吃得健康。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 보내다（寄，送）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>나는 친구에게 편지를 보냈어요.（我给朋友寄了信。）</li>
+<li>어머니께서 선물을 보내셨어요.（母亲寄了礼物。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>부자래? 몇 살이래?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“听说他是富翁？听说他几岁了？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(이)래：用于名词后，表示传闻或间接引用，相当于“听说……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>그는 의사래.（听说他是医生。）</li>
+<li>여기가 맛집이래.（听说这里是美食店。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 부자（富翁）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 부자라서 걱정이 없어요.（他是富翁，所以没有什么担忧。）</li>
+<li>부자가 되는 것이 그의 꿈이에요.（成为富翁是他的梦想。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>뭐 하는 사람인진 물어봤어?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“你问过他是做什么的吗？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)ㄴ/는지：用于动词后，表示不确定的间接疑问，相当于“是否……”或“……吗？”</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>그가 어디에 사는지 알아요?（你知道他住在哪里吗？）</li>
+<li>이게 무슨 뜻인지 이해했어요?（你明白这是什么意思吗？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 물어보다（询问，打听）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 나에게 길을 물어봤어요.（他向我问路。）</li>
+<li>궁금한 것이 있으면 물어보세요.（有问题的话请问。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>우리 초대한대? 비행기표 보낸대?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“听说要邀请我们？听说要寄飞机票？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(이)래：用于动词后，表示传闻或间接引用，相当于“听说……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>그는 내일 온대.（听说他明天来。）</li>
+<li>여기가 유명한 가게래.（听说这里是有名的店。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 초대하다（邀请）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>친구를 파티에 초대했어요.（邀请了朋友参加聚会。）</li>
+<li>그는 우리를 저녁 식사에 초대했어요.（他邀请我们吃晚餐。）</li>
+</ol>
+<ul>
+<li>보내다（寄，送）</li>
+</ul>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 나에게 책을 보냈어요.（他给我寄了书。）</li>
+<li>어머니께서 선물을 보내셨어요.（母亲寄了礼物。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>여동생이 너무 제 취향이네요</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“妹妹太符合我的喜好了。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>네요：用于动词或形容词后，表示说话者的惊讶或感叹，相当于“……啊”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>날씨가 정말 좋네요.（天气真好啊。）</li>
+<li>그 책이 재미있네요.（那本书真有趣啊。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 취향（喜好，偏好）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>이 음악은 제 취향이 아니에요.（这音乐不是我的喜好。）</li>
+<li>그의 옷 스타일은 제 취향이에요.（他的穿衣风格符合我的喜好。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>환전하시게요?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“您要换钱吗？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)시겠어요/시게요：用于动词词干后，表示对听话人的尊敬和询问，相当于“您要……吗？”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>뭘 드시겠어요?（您要吃什么？）</li>
+<li>어디로 가시겠어요?（您要去哪里？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 환전하다（换钱，兑换外币）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>공항에서 환전할 수 있어요.（可以在机场换钱。）</li>
+<li>은행에서 돈을 환전했어요.（在银行兑换了钱。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>여권은 내가 알아서 만들었어. 나오는 데 3일 걸린대</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“护照我自己办了。听说需要3天才能出来。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(ㄴ/는)대：用于动词或形容词后，表示传闻或间接引用，相当于“听说……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>그가 내일 온대.（听说他明天来。）</li>
+<li>여기가 유명한 식당이래.（听说这里是有名的餐馆。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 알아서 하다（自己处理）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>나는 모든 것을 알아서 할 수 있어요.（我可以自己处理所有事情。）</li>
+<li>이 문제는 내가 알아서 해결할게.（这个问题我自己解决。）</li>
+</ol>
+<ul>
+<li>여권（护照）</li>
+</ul>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>여권을 잃어버렸어요.（我丢了护照。）</li>
+<li>새로운 여권을 발급받았어요.（我拿到了新的护照。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>우리 재혼 마음에 안 드는 거 아는데</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“我知道你对我们的再婚不满意。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>는데/은데/ㄴ데：用于动词或形容词后，表示背景、对比或提示下文，相当于“……但……”或“……而……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>나는 학생인데 동생은 회사원이에요.（我是学生，而弟弟是公司职员。）</li>
+<li>지금 바쁜데 나중에 얘기할까요?（现在很忙，我们以后再谈吧？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 들다（满意，喜欢）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>이 음식이 마음에 들어요.（这食物合我心意。）</li>
+<li>그 사람의 태도가 마음에 들어요.（我喜欢那个人的态度。）</li>
+</ol>
+<p><strong>其他例句：</strong></p>
+<ol type="1">
+<li>네가 내 선물을 마음에 안 드는 줄 알았어.（我知道你不喜欢我的礼物。）</li>
+<li>그는 그 계획이 마음에 안 드는 것 같아요.（他似乎不喜欢那个计划。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>내가 제일 처음 한 생각은</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“我最初的想法是……”</em></p>
+<p><strong>重要语法点：</strong> - 제일：用于名词前，表示最高级，意思是“最……”。</p>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>이게 제일 좋아요.（这个最好。）</li>
+<li>제일 먼저 도착했어요.（最先到达。）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 처음（初次，最初）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>처음 만났을 때가 생각나요.（想起了初次见面的时候。）</li>
+<li>처음부터 다시 시작합시다.（从头再开始吧。）</li>
+</ol>
+<p><strong>其他例句：</strong></p>
+<ol type="1">
+<li>내가 제일 처음 한 일은 아침 운동이었어요.（我最初做的事是早晨锻炼。）</li>
+<li>내가 제일 처음 배운 한국어 단어는 ‘안녕하세요’였어요.（我最初学的韩语单词是‘你好’。）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>집에 계신 회장님은 제가 얼마나 무능한지 일주일 전에 아셨는데</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“在家的会长一周前知道了我有多么无能。”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)ㄴ지/는지：用于动词或形容词后，表示不确定的间接疑问或感叹，相当于“是否……”或“多么……”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>그가 얼마나 열심히 공부하는지 몰라요.（不知道他有多么努力学习。）</li>
+<li>이게 얼마나 중요한지 알아요?（你知道这有多重要吗？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 무능하다（无能）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 무능하다는 평가를 받았어요.（他被评价为无能。）</li>
+<li>무능한 사람은 팀에 도움이 되지 않아요.（无能的人对团队没有帮助。）</li>
+</ol>
+<p><strong>其他例句：</strong></p>
+<ol type="1">
+<li>집에 계신 어머니가 얼마나 걱정하시는지 알아요?（你知道在家的母亲有多担心吗？）</li>
+<li>이 문제가 얼마나 심각한지 이해하세요?（你理解这个问题有多严重吗？）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>돈은 가져왔어?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“钱带来了吗？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>았/었어：用于动词或形容词后，表示过去式的非正式疑问句，相当于“……了吗？”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>밥 먹었어?（吃饭了吗？）</li>
+<li>숙제 다 했어?（作业都做完了吗？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 가져오다（带来）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>우산을 가져왔어?（伞带来了吗？）</li>
+<li>그는 중요한 서류를 가져왔어요.（他带来了重要的文件。）</li>
+</ol>
+<p><strong>其他例句：</strong></p>
+<ol type="1">
+<li>너희 돈은 다 준비됐어?（你们的钱都准备好了吗？）</li>
+<li>잃어버린 지갑을 찾아왔어?（丢失的钱包找回来了吗？）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>계속 여기 이러고 있을 거야?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“你打算一直这样待在这里吗？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)ㄹ 거야：用于动词后，表示将来时的非正式口语形式，相当于“……会……吗？”。</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>내일 뭐 할 거야?（明天你会做什么？）</li>
+<li>저녁에 어디 갈 거야?（晚上你会去哪里？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 계속（继续，一直）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>그는 계속 일하고 있어요.（他一直在工作。）</li>
+<li>우리는 계속 기다릴 거야.（我们会一直等。）</li>
+</ol>
+<p><strong>其他例句：</strong></p>
+<ol type="1">
+<li>너 계속 여기 있을 거야?（你会一直在这里待着吗？）</li>
+<li>이 상태로 계속 갈 거야?（你会一直这样下去吗？）</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>아무도 없는 거 아니야?</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>“不会是一个人也没有吧？”</em></p>
+<p><strong>重要语法点：</strong></p>
+<ul>
+<li>(으)ㄴ/는 거 아니야?：用于动词或形容词后，表示对情况的推测或反问，相当于“不会是……吧？”或“难道不是……吗？”</li>
+</ul>
+<p><strong>语法点例句：</strong></p>
+<ol type="1">
+<li>비 오는 거 아니야?（不会是下雨吧？）</li>
+<li>그 사람이 도와줄 수 있는 거 아니야?（难道那个人不能帮忙吗？）</li>
+</ol>
+<p><strong>高级词汇：</strong> - 아무도（任何人，任何人都不）</p>
+<p><strong>高级词汇例句：</strong></p>
+<ol type="1">
+<li>아무도 나를 도와주지 않았어요.（任何人都没有帮助我。）</li>
+<li>그 방에는 아무도 없었어요.（那个房间里没有人。）</li>
+</ol>
+<p><strong>其他例句：</strong></p>
+<ol type="1">
+<li>여기 정말 아무도 없는 거 아니야?（这里真的一个人也没有吗？）</li>
+<li>아무도 모르는 거 아니야?（不会是任何人都不知道吧？）</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="netflix-泪之女王" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Netflix 泪之女王</h1>
+<section id="제11화" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="제11화"><span class="header-section-number">3.1</span> 제11화</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -271,7 +1252,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“但是，那样的话对我们孩子有帮助吗？”</em></p>
 <p><strong>힘 (力量):</strong></p>
@@ -288,7 +1269,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -297,7 +1278,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“在做困难决定的时候，我会想起父亲。”</em></p>
 <p><strong>결정 (决定):</strong></p>
@@ -322,7 +1303,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -331,7 +1312,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“现在只有老板的屈辱重要吗？”</em></p>
 <p><strong>굴욕 (屈辱):</strong></p>
@@ -348,7 +1329,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -357,7 +1338,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“不可信任。”</em></p>
 <p><strong>신뢰 (信任):</strong></p>
@@ -369,7 +1350,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -378,7 +1359,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“我会抱你。”</em></p>
 <p><strong>안다 (拥抱): verb</strong></p>
@@ -390,7 +1371,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -399,7 +1380,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“你现在在担心我吗？”</em></p>
 <p><strong>걱정 (担心):</strong></p>
@@ -411,7 +1392,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -420,7 +1401,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“我有资格得到你的爱吗？”</em></p>
 <p><strong>자격 (资格):</strong></p>
@@ -432,7 +1413,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -441,7 +1422,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“还需要更多解释吗？”</em></p>
 <p><strong>설명 (解释):</strong></p>
@@ -453,7 +1434,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -462,7 +1443,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“讨论结束了吗？”</em></p>
 <p><strong>얘기 (讨论):</strong></p>
@@ -479,7 +1460,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -488,7 +1469,7 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>“为了公司？”</em></p>
 <p><strong>위하다：为了</strong></p>
@@ -501,12 +1482,12 @@ Use “MarkDownload” chrome extension to send it to Obsidian or copy as Markdo
 </div>
 </section>
 </section>
-<section id="哑巴韩国语入门" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 哑巴韩国语入门</h1>
-<section id="야-돼-musthave-to" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="야-돼-musthave-to"><span class="header-section-number">3.1</span> 야 돼 (must/have to)</h2>
+<section id="哑巴韩国语入门" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 哑巴韩国语入门</h1>
+<section id="야-돼-musthave-to" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="야-돼-musthave-to"><span class="header-section-number">4.1</span> 야 돼 (must/have to)</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -515,7 +1496,7 @@ Expressing Necessity: 지금 가야 돼.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>이 약을 먹어야 돼.</strong><br>
@@ -527,7 +1508,7 @@ Expressing Necessity: 지금 가야 돼.
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -536,7 +1517,7 @@ Giving Instructions: 여기에 이름을 써야 돼.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>여기에 이름을 써야 돼.</strong><br>
@@ -550,7 +1531,7 @@ Giving Instructions: 여기에 이름을 써야 돼.
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -559,7 +1540,7 @@ Asking About Necessity: 정말 이걸 해야 돼?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>정말 이걸 해야 돼?</strong><br>
@@ -573,7 +1554,7 @@ Asking About Necessity: 정말 이걸 해야 돼?
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -582,7 +1563,7 @@ In Everyday Situations: 내일 일찍 일어나야 돼.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>내일 일찍 일어나야 돼.</strong><br>
@@ -596,10 +1577,10 @@ In Everyday Situations: 내일 일찍 일어나야 돼.
 </div>
 </div>
 </section>
-<section id="도-돼-maycan" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="도-돼-maycan"><span class="header-section-number">3.2</span> 도 돼 (may/can)</h2>
+<section id="도-돼-maycan" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="도-돼-maycan"><span class="header-section-number">4.2</span> 도 돼 (may/can)</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -608,7 +1589,7 @@ Expressing Permission: 여기 앉아도 돼.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-47" class="callout-47-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>여기 앉아도 돼.</strong><br>
@@ -622,7 +1603,7 @@ Expressing Permission: 여기 앉아도 돼.
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -631,7 +1612,7 @@ Asking for Permission: 지금 나가도 돼요?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>지금 나가도 돼요?</strong><br>
@@ -645,7 +1626,7 @@ Asking for Permission: 지금 나가도 돼요?
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -654,7 +1635,7 @@ Giving Permission: 컴퓨터 써도 돼요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-49" class="callout-49-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>컴퓨터 써도 돼요.</strong><br>
@@ -668,7 +1649,7 @@ Giving Permission: 컴퓨터 써도 돼요.
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -677,7 +1658,7 @@ In Everyday Situations: 전화해도 돼요?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>전화해도 돼요?</strong><br>
@@ -692,15 +1673,15 @@ In Everyday Situations: 전화해도 돼요?
 </div>
 </section>
 </section>
-<section id="연세한국어1-2" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 연세한국어1-2</h1>
-<section id="verb-conjugation-for-questions-아요어요" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="verb-conjugation-for-questions-아요어요"><span class="header-section-number">4.1</span> Verb Conjugation for Questions (아요/어요)</h2>
+<section id="연세한국어1-2" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 연세한국어1-2</h1>
+<section id="verb-conjugation-for-questions-아요어요" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="verb-conjugation-for-questions-아요어요"><span class="header-section-number">5.1</span> Verb Conjugation for Questions (아요/어요)</h2>
 <ul>
 <li><strong>-까요?</strong>: Used to ask a suggestion or opinion.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -709,7 +1690,7 @@ Example Sentences: 갈까요?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>갈까요?</strong> (Shall we go?)</li>
@@ -720,13 +1701,13 @@ Example Sentences: 갈까요?
 </div>
 </div>
 </section>
-<section id="verbs-하다-타다-가다-세우다" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="verbs-하다-타다-가다-세우다"><span class="header-section-number">4.2</span> Verbs (하다, 타다, 가다, 세우다)</h2>
+<section id="verbs-하다-타다-가다-세우다" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="verbs-하다-타다-가다-세우다"><span class="header-section-number">5.2</span> Verbs (하다, 타다, 가다, 세우다)</h2>
 <ul>
 <li><strong>세우다</strong> (to stop/park)</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -735,7 +1716,7 @@ Example Sentences: 차를 세우다
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-52" class="callout-52-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>차를 세우다</strong> (to stop the car)</li>
@@ -746,13 +1727,13 @@ Example Sentences: 차를 세우다
 </div>
 </div>
 </section>
-<section id="descriptive-form-어서아서" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="descriptive-form-어서아서"><span class="header-section-number">4.3</span> Descriptive Form (어서/아서)</h2>
+<section id="descriptive-form-어서아서" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="descriptive-form-어서아서"><span class="header-section-number">5.3</span> Descriptive Form (어서/아서)</h2>
 <ul>
 <li><strong>-어서/아서</strong>: Indicates reason or cause, meaning “because.”</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -761,7 +1742,7 @@ Example Sentences: 피곤해서 잠을 잤어요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-53" class="callout-53-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>피곤해서 잠을 잤어요.</strong> (Because I was tired, I slept.)</li>
@@ -772,13 +1753,13 @@ Example Sentences: 피곤해서 잠을 잤어요.
 </div>
 </div>
 </section>
-<section id="use-of-로-to-indicate-direction-으로로" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="use-of-로-to-indicate-direction-으로로"><span class="header-section-number">4.4</span> Use of “로” to Indicate Direction (으로/로)</h2>
+<section id="use-of-로-to-indicate-direction-으로로" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="use-of-로-to-indicate-direction-으로로"><span class="header-section-number">5.4</span> Use of “로” to Indicate Direction (으로/로)</h2>
 <ul>
 <li><strong>으로/로</strong>: Indicates direction or means.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -787,7 +1768,7 @@ Example Sentences: 버스로 갑시다.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>버스로 갑시다.</strong> (Let’s go by bus.)</li>
@@ -798,13 +1779,13 @@ Example Sentences: 버스로 갑시다.
 </div>
 </div>
 </section>
-<section id="honorific-form-세요주세요" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="honorific-form-세요주세요"><span class="header-section-number">4.5</span> Honorific Form (세요/주세요)</h2>
+<section id="honorific-form-세요주세요" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="honorific-form-세요주세요"><span class="header-section-number">5.5</span> Honorific Form (세요/주세요)</h2>
 <ul>
 <li><strong>-세요</strong>: Used for making polite requests or instructions.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -813,7 +1794,7 @@ Example Sentences: 들어오세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-55" class="callout-55-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>들어오세요.</strong> (Please come in.)</li>
@@ -827,7 +1808,7 @@ Example Sentences: 들어오세요.
 <li><strong>-주세요</strong>: Used to politely ask someone to do something.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -836,7 +1817,7 @@ Example Sentences: 물을 주세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-56" class="callout-56-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>물을 주세요.</strong> (Please give me water.)</li>
@@ -847,13 +1828,13 @@ Example Sentences: 물을 주세요.
 </div>
 </div>
 </section>
-<section id="verbs-쓰다-시다" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="verbs-쓰다-시다"><span class="header-section-number">4.6</span> Verbs (쓰다, 시다)</h2>
+<section id="verbs-쓰다-시다" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="verbs-쓰다-시다"><span class="header-section-number">5.6</span> Verbs (쓰다, 시다)</h2>
 <ul>
 <li><strong>쓰다</strong> (to write/use/wear)</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -862,7 +1843,7 @@ Example Sentences: 편지를 씁니다.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-57" class="callout-57-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>편지를 씁니다.</strong> (I write a letter.)</li>
@@ -876,7 +1857,7 @@ Example Sentences: 편지를 씁니다.
 <li><strong>시다</strong> (to be sour)</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -885,7 +1866,7 @@ Example Sentences: 이 레몬은 정말 셔요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-58" class="callout-58-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>이 레몬은 정말 셔요.</strong> (This lemon is really sour.)</li>
@@ -897,12 +1878,12 @@ Example Sentences: 이 레몬은 정말 셔요.
 </div>
 </section>
 </section>
-<section id="연세한국어2-1" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 연세한국어2-1</h1>
-<section id="grammar-point-언제든지-anytime" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="grammar-point-언제든지-anytime"><span class="header-section-number">5.1</span> Grammar Point: 언제든지 (Anytime)</h2>
+<section id="연세한국어2-1" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 연세한국어2-1</h1>
+<section id="grammar-point-언제든지-anytime" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="grammar-point-언제든지-anytime"><span class="header-section-number">6.1</span> Grammar Point: 언제든지 (Anytime)</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -911,7 +1892,7 @@ Example Sentences: 언제든지 제 방에 들어오세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div id="callout-59" class="callout-59-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>언제든지 제 방에 들어오세요.</strong>
@@ -937,10 +1918,10 @@ Example Sentences: 언제든지 제 방에 들어오세요.
 <li>취하다 (취할 수 있습니다) - to take (a break)</li>
 </ul>
 </section>
-<section id="grammar-point-처음이지만-although-its-the-first-time" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="grammar-point-처음이지만-although-its-the-first-time"><span class="header-section-number">5.2</span> Grammar Point: 처음이지만 (Although it’s the first time)</h2>
+<section id="grammar-point-처음이지만-although-its-the-first-time" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="grammar-point-처음이지만-although-its-the-first-time"><span class="header-section-number">6.2</span> Grammar Point: 처음이지만 (Although it’s the first time)</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -949,7 +1930,7 @@ Example Sentences: 이 도시에 처음 왔지만, 길 찾기가 쉽습니다.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-60" class="callout-60-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>이 도시에 처음 왔지만, 길 찾기가 쉽습니다.</strong>
@@ -975,10 +1956,10 @@ Example Sentences: 이 도시에 처음 왔지만, 길 찾기가 쉽습니다.
 <li>해보다 (해보지만) - to try (doing something), to attempt</li>
 </ul>
 </section>
-<section id="grammar-point--기-때문에--because" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="grammar-point--기-때문에--because"><span class="header-section-number">5.3</span> Grammar Point: -기 때문에 (-because)</h2>
+<section id="grammar-point--기-때문에--because" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="grammar-point--기-때문에--because"><span class="header-section-number">6.3</span> Grammar Point: -기 때문에 (-because)</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -987,7 +1968,7 @@ Example Sentences: 오늘은 피곤하기 때문에 일찍 잘 거예요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-61" class="callout-61-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>오늘은 피곤하기 때문에 일찍 잘 거예요.</strong>
@@ -1013,10 +1994,10 @@ Example Sentences: 오늘은 피곤하기 때문에 일찍 잘 거예요.
 <li>공부하다 (공부하기 때문에) - to study</li>
 </ul>
 </section>
-<section id="grammar-point-잘-well" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="grammar-point-잘-well"><span class="header-section-number">5.4</span> Grammar Point: 잘 (well)</h2>
+<section id="grammar-point-잘-well" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="grammar-point-잘-well"><span class="header-section-number">6.4</span> Grammar Point: 잘 (well)</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1025,7 +2006,7 @@ Example Sentences: 그는 피아노를 잘 칩니다.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-62" class="callout-62-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>그는 피아노를 잘 칩니다.</strong>
@@ -1051,10 +2032,10 @@ Example Sentences: 그는 피아노를 잘 칩니다.
 <li>추다 (춥니다) - to dance</li>
 </ul>
 </section>
-<section id="grammar-point-부드러워서-because-its-gentlesoft" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="grammar-point-부드러워서-because-its-gentlesoft"><span class="header-section-number">5.5</span> Grammar Point: 부드러워서 (because it’s gentle/soft)</h2>
+<section id="grammar-point-부드러워서-because-its-gentlesoft" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="grammar-point-부드러워서-because-its-gentlesoft"><span class="header-section-number">6.5</span> Grammar Point: 부드러워서 (because it’s gentle/soft)</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-63-contents" aria-controls="callout-63" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1063,7 +2044,7 @@ Example Sentences: 그 고양이는 털이 부드러워서 만지기 좋아요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-63" class="callout-63-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>그 고양이는 털이 부드러워서 만지기 좋아요.</strong>

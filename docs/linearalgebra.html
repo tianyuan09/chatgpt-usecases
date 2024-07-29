@@ -70,12 +70,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://hypothes.is/embed.js"></script>
-<script>
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    document.body.classList.add('hypothesis-enabled');
-  });
-</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -187,8 +181,9 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#diagonalization" id="toc-diagonalization" class="nav-link active" data-scroll-target="#diagonalization"><span class="header-section-number">2.1</span> Diagonalization</a></li>
-  <li><a href="#key-points-on-diagonalizability" id="toc-key-points-on-diagonalizability" class="nav-link" data-scroll-target="#key-points-on-diagonalizability"><span class="header-section-number">2.2</span> Key Points on Diagonalizability</a></li>
+  <li><a href="#eigendecomposition-of-a-matrix" id="toc-eigendecomposition-of-a-matrix" class="nav-link active" data-scroll-target="#eigendecomposition-of-a-matrix"><span class="header-section-number">2.1</span> Eigendecomposition of a matrix</a></li>
+  <li><a href="#diagonalization" id="toc-diagonalization" class="nav-link" data-scroll-target="#diagonalization"><span class="header-section-number">2.2</span> Diagonalization</a></li>
+  <li><a href="#key-points-on-diagonalizability" id="toc-key-points-on-diagonalizability" class="nav-link" data-scroll-target="#key-points-on-diagonalizability"><span class="header-section-number">2.3</span> Key Points on Diagonalizability</a></li>
   </ul>
 </nav>
     </div>
@@ -214,11 +209,61 @@ window.Quarto = {
 </header>
 
 
-<section id="diagonalization" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="diagonalization"><span class="header-section-number">2.1</span> Diagonalization</h2>
-<p><strong>MIT Lecture Video</strong>: <a href="https://www.youtube.com/watch?v=13r9QY6cmjc&amp;list=PL49CF3715CB9EF31D&amp;index=22">22. Diagonalization and Powers of A</a></p>
+<section id="eigendecomposition-of-a-matrix" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="eigendecomposition-of-a-matrix"><span class="header-section-number">2.1</span> Eigendecomposition of a matrix</h2>
+<p>This is also referred to as the <code>spectral decomposition</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prove <span class="math inline">\(AS = SV\)</span> where square matrix <span class="math inline">\(A\)</span> with its eigenvectors as columns in <span class="math inline">\(S\)</span> and corresponding eigenvalues in diagonal matrix <span class="math inline">\(V\)</span>.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="definitions-and-setup" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="definitions-and-setup"><span class="header-section-number">2.1.1</span> Definitions and Setup</h3>
+<ol type="1">
+<li><strong>Matrix <span class="math inline">\(A\)</span></strong>: a square matrix of size <span class="math inline">\(n \times n\)</span>.</li>
+<li><strong>Matrix <span class="math inline">\(S\)</span></strong>: a matrix <span class="math inline">\(S = [v_1, v_2, \ldots, v_n]\)</span> where each column vector <span class="math inline">\(v_i\)</span> is an eigenvector of <span class="math inline">\(A\)</span>. Thus, <span class="math inline">\(S\)</span> is <span class="math inline">\(n \times n\)</span>.</li>
+<li><strong>Matrix <span class="math inline">\(V\)</span></strong>: a diagonal matrix <span class="math inline">\(V = \text{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)\)</span>, where <span class="math inline">\(\lambda_i\)</span> is the eigenvalue corresponding to the eigenvector <span class="math inline">\(v_i\)</span> in <span class="math inline">\(S\)</span>.</li>
+</ol>
+</section>
+<section id="eigenvector-and-eigenvalue-relationship" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="eigenvector-and-eigenvalue-relationship"><span class="header-section-number">2.1.2</span> Eigenvector and Eigenvalue Relationship</h3>
+<p>For each eigenvector <span class="math inline">\(v_i\)</span> of <span class="math inline">\(A\)</span>, the corresponding eigenvalue equation is: <span class="math display">\[ A v_i = \lambda_i v_i \]</span></p>
+</section>
+<section id="matrix-multiplication-as" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="matrix-multiplication-as"><span class="header-section-number">2.1.3</span> Matrix Multiplication <span class="math inline">\(AS\)</span></h3>
+<p>When we multiply <span class="math inline">\(A\)</span> by <span class="math inline">\(S\)</span>, we are essentially multiplying <span class="math inline">\(A\)</span> by each eigenvector <span class="math inline">\(v_i\)</span> in <span class="math inline">\(S\)</span>: <span class="math display">\[ AS = A[v_1, v_2, \ldots, v_n] = [A v_1, A v_2, \ldots, A v_n] \]</span></p>
+<p>Using the eigenvalue relationship: <span class="math display">\[ AS = [\lambda_1 v_1, \lambda_2 v_2, \ldots, \lambda_n v_n] \]</span></p>
+</section>
+<section id="matrix-multiplication-sv" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="matrix-multiplication-sv"><span class="header-section-number">2.1.4</span> Matrix Multiplication <span class="math inline">\(SV\)</span></h3>
+<p>Multiplying <span class="math inline">\(S\)</span> by <span class="math inline">\(V\)</span>, where <span class="math inline">\(V\)</span> is diagonal, we scale each column vector <span class="math inline">\(v_i\)</span> of <span class="math inline">\(S\)</span> by the corresponding diagonal entry <span class="math inline">\(\lambda_i\)</span> of <span class="math inline">\(V\)</span>: <span class="math display">\[ SV = [v_1, v_2, \ldots, v_n] \begin{bmatrix} \lambda_1 &amp; 0 &amp; \ldots &amp; 0 \\ 0 &amp; \lambda_2 &amp; \ldots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; 0 &amp; \ldots &amp; \lambda_n \end{bmatrix} \]</span> <span class="math display">\[ SV = [\lambda_1 v_1, \lambda_2 v_2, \ldots, \lambda_n v_n] \]</span></p>
+</section>
+<section id="comparing-as-and-sv" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="comparing-as-and-sv"><span class="header-section-number">2.1.5</span> Comparing <span class="math inline">\(AS\)</span> and <span class="math inline">\(SV\)</span></h3>
+<p>From the results above: <span class="math display">\[ AS = [\lambda_1 v_1, \lambda_2 v_2, \ldots, \lambda_n v_n] \]</span> <span class="math display">\[ SV = [\lambda_1 v_1, \lambda_2 v_2, \ldots, \lambda_n v_n] \]</span></p>
+<p>Thus: <span class="math display">\[ AS = SV \]</span></p>
+</section>
+<section id="conclusion" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">2.1.6</span> Conclusion</h3>
+<p>The equation <span class="math inline">\(AS = SV\)</span> holds true under the condition that the columns of <span class="math inline">\(S\)</span> are the eigenvectors of <span class="math inline">\(A\)</span>, and the entries of <span class="math inline">\(V\)</span> are the corresponding eigenvalues. This equality shows that each eigenvector of <span class="math inline">\(A\)</span> is scaled by its corresponding eigenvalue when multiplied by <span class="math inline">\(A\)</span>, which aligns with the definition of eigenvalues and eigenvectors.</p>
+<p>This proof forms the basis for the spectral decomposition of matrices and is fundamental in linear algebra, especially in fields like quantum mechanics, vibration analysis, and more.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="diagonalization" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="diagonalization"><span class="header-section-number">2.2</span> Diagonalization</h2>
+<p><strong>MIT Lecture Video</strong>: <a href="https://www.youtube.com/watch?v=13r9QY6cmjc&amp;list=PL49CF3715CB9EF31D&amp;index=22">22. Diagonalization and Powers of A</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -227,7 +272,7 @@ What does a diagonal matrix look like?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>A diagonal matrix is a matrix in which the entries outside the main diagonal are all zero. Here is an example of a diagonal matrix:</p>
 <span class="math display">\[\begin{pmatrix}
@@ -240,7 +285,7 @@ What does a diagonal matrix look like?
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -249,7 +294,7 @@ What does it mean by “diagonalizable” in linear algebra?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In linear algebra, a matrix is said to be “diagonalizable” if it can be transformed into a diagonal matrix. Specifically, a square matrix (A) is diagonalizable if there exists an invertible matrix (P) and a diagonal matrix (D) such that:</p>
 <p><span class="math display">\[
@@ -260,7 +305,7 @@ P^{-1} A P = D
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -269,17 +314,17 @@ What is the relationship between Diagonalizable Matrices, Eigenvalues, and Eigen
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<section id="diagonalizable-matrices" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="diagonalizable-matrices"><span class="header-section-number">2.1.1</span> Diagonalizable Matrices</h3>
+<section id="diagonalizable-matrices" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="diagonalizable-matrices"><span class="header-section-number">2.2.1</span> Diagonalizable Matrices</h3>
 <p>A matrix ( A ) is said to be diagonalizable if it can be transformed into a diagonal matrix ( D ). This means there exists an invertible matrix ( P ) and a diagonal matrix ( D ) such that:</p>
 <p><span class="math display">\[
 P^{-1} A P = D
 \]</span></p>
 </section>
-<section id="eigenvalues-and-eigenvectors" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors"><span class="header-section-number">2.1.2</span> Eigenvalues and Eigenvectors</h3>
+<section id="eigenvalues-and-eigenvectors" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors"><span class="header-section-number">2.2.2</span> Eigenvalues and Eigenvectors</h3>
 <p>Eigenvalues and eigenvectors are key concepts related to diagonalizable matrices:</p>
 <ol type="1">
 <li><p><strong>Eigenvalues <span class="math inline">\(\lambda\)</span></strong>: These are the values such that for a given matrix ( A ) and a non-zero vector ( ), the following equation holds: <span class="math display">\[
@@ -288,15 +333,15 @@ A \mathbf{v} = \lambda \mathbf{v}
 <li><p><strong>Eigenvectors <span class="math inline">\(\mathbf{v}\)</span></strong>: These are the non-zero vectors that satisfy the eigenvalue equation above. Each eigenvector corresponds to an eigenvalue.</p></li>
 </ol>
 </section>
-<section id="connecting-the-concepts" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="connecting-the-concepts"><span class="header-section-number">2.1.3</span> Connecting the Concepts</h3>
+<section id="connecting-the-concepts" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="connecting-the-concepts"><span class="header-section-number">2.2.3</span> Connecting the Concepts</h3>
 <ol type="1">
 <li><p><strong>Diagonalization and Eigenvalues</strong>: The diagonal elements of the matrix ( D ) are the eigenvalues of the matrix ( A ).</p></li>
 <li><p><strong>Matrix ( P ) and Eigenvectors</strong>: The columns of the matrix ( P ) are the eigenvectors of the matrix ( A ). If ( A ) has ( n ) linearly independent eigenvectors, then these eigenvectors form the columns of the invertible matrix ( P ).</p></li>
 </ol>
 </section>
-<section id="summary" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.1.4</span> Summary</h3>
+<section id="summary" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.2.4</span> Summary</h3>
 <ul>
 <li>A matrix ( A ) is diagonalizable if it has enough linearly independent eigenvectors to form the matrix ( P ).</li>
 <li>The diagonal matrix ( D ) contains the eigenvalues of ( A ) along its diagonal.</li>
@@ -308,7 +353,7 @@ A \mathbf{v} = \lambda \mathbf{v}
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -317,11 +362,11 @@ What are the advantages of diagonalization?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Diagonalizing a matrix provides numerous benefits, making it a powerful tool in linear algebra. Here are some of the primary advantages:</p>
-<section id="simplification-of-matrix-operations" class="level3" data-number="2.1.5">
-<h3 data-number="2.1.5" class="anchored" data-anchor-id="simplification-of-matrix-operations"><span class="header-section-number">2.1.5</span> Simplification of Matrix Operations</h3>
+<section id="simplification-of-matrix-operations" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="simplification-of-matrix-operations"><span class="header-section-number">2.2.5</span> Simplification of Matrix Operations</h3>
 <ol type="1">
 <li><p><strong>Matrix Powers</strong>: Diagonal matrices are much easier to raise to a power. If ( A ) is diagonalizable, and we have ( P^{-1} A P = D ), then:</p>
 <p><span class="math display">\[
@@ -335,28 +380,28 @@ e^A = P e^D P^{-1}
 <p>where ( e^D ) is the exponential of the diagonal matrix ( D ), computed by taking the exponential of each diagonal element.</p></li>
 </ol>
 </section>
-<section id="eigenvalue-analysis" class="level3" data-number="2.1.6">
-<h3 data-number="2.1.6" class="anchored" data-anchor-id="eigenvalue-analysis"><span class="header-section-number">2.1.6</span> Eigenvalue Analysis</h3>
+<section id="eigenvalue-analysis" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="eigenvalue-analysis"><span class="header-section-number">2.2.6</span> Eigenvalue Analysis</h3>
 <ol start="3" type="1">
 <li><p><strong>Understanding Dynamics</strong>: In systems of differential equations, diagonalization helps to decouple the system, making it easier to analyze and solve. The eigenvalues can indicate stability and the nature of the system’s behavior.</p></li>
 <li><p><strong>Quantum Mechanics</strong>: In quantum mechanics, diagonalization is used to simplify the Hamiltonian operator, allowing for easier computation of the system’s energy levels and states.</p></li>
 </ol>
 </section>
-<section id="computational-efficiency" class="level3" data-number="2.1.7">
-<h3 data-number="2.1.7" class="anchored" data-anchor-id="computational-efficiency"><span class="header-section-number">2.1.7</span> Computational Efficiency</h3>
+<section id="computational-efficiency" class="level3" data-number="2.2.7">
+<h3 data-number="2.2.7" class="anchored" data-anchor-id="computational-efficiency"><span class="header-section-number">2.2.7</span> Computational Efficiency</h3>
 <ol start="5" type="1">
 <li><p><strong>Efficient Computations</strong>: Algorithms that utilize diagonalization can be more computationally efficient for large matrices, as operations on diagonal matrices are simpler and faster.</p></li>
 <li><p><strong>Simplification in Engineering and Physics</strong>: Many problems in engineering and physics can be reduced to diagonalizable forms, simplifying both theoretical analysis and practical computations.</p></li>
 </ol>
 </section>
-<section id="insight-into-matrix-structure" class="level3" data-number="2.1.8">
-<h3 data-number="2.1.8" class="anchored" data-anchor-id="insight-into-matrix-structure"><span class="header-section-number">2.1.8</span> Insight into Matrix Structure</h3>
+<section id="insight-into-matrix-structure" class="level3" data-number="2.2.8">
+<h3 data-number="2.2.8" class="anchored" data-anchor-id="insight-into-matrix-structure"><span class="header-section-number">2.2.8</span> Insight into Matrix Structure</h3>
 <ol start="7" type="1">
 <li><strong>Geometric Interpretation</strong>: Diagonalization provides insights into the geometric structure of a matrix, revealing important properties through its eigenvalues and eigenvectors.</li>
 </ol>
 </section>
-<section id="summary-1" class="level3" data-number="2.1.9">
-<h3 data-number="2.1.9" class="anchored" data-anchor-id="summary-1"><span class="header-section-number">2.1.9</span> Summary</h3>
+<section id="summary-1" class="level3" data-number="2.2.9">
+<h3 data-number="2.2.9" class="anchored" data-anchor-id="summary-1"><span class="header-section-number">2.2.9</span> Summary</h3>
 <ul>
 <li><strong>Matrix Powers</strong>: Easier computation of powers and functions of matrices.</li>
 <li><strong>System Dynamics</strong>: Simplifies analysis of dynamic systems.</li>
@@ -369,7 +414,7 @@ e^A = P e^D P^{-1}
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -378,11 +423,11 @@ Give me a concrete example to showcase the advantages of diagonalization
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Diagonalization offers numerous benefits, especially in simplifying matrix computations. Let’s demonstrate this with a concrete example.</p>
-<section id="example-diagonalizing-a-matrix" class="level3" data-number="2.1.10">
-<h3 data-number="2.1.10" class="anchored" data-anchor-id="example-diagonalizing-a-matrix"><span class="header-section-number">2.1.10</span> Example: Diagonalizing a Matrix</h3>
+<section id="example-diagonalizing-a-matrix" class="level3" data-number="2.2.10">
+<h3 data-number="2.2.10" class="anchored" data-anchor-id="example-diagonalizing-a-matrix"><span class="header-section-number">2.2.10</span> Example: Diagonalizing a Matrix</h3>
 <p>Consider the matrix <span class="math inline">\(A\)</span>:</p>
 <p><span class="math display">\[
 A = \begin{pmatrix}
@@ -390,8 +435,8 @@ A = \begin{pmatrix}
 2 &amp; 3
 \end{pmatrix}
 \]</span></p>
-<section id="step-1-find-the-eigenvalues" class="level4" data-number="2.1.10.1">
-<h4 data-number="2.1.10.1" class="anchored" data-anchor-id="step-1-find-the-eigenvalues"><span class="header-section-number">2.1.10.1</span> Step 1: Find the Eigenvalues</h4>
+<section id="step-1-find-the-eigenvalues" class="level4" data-number="2.2.10.1">
+<h4 data-number="2.2.10.1" class="anchored" data-anchor-id="step-1-find-the-eigenvalues"><span class="header-section-number">2.2.10.1</span> Step 1: Find the Eigenvalues</h4>
 <p>Solve the characteristic equation <span class="math inline">\(\det(A - \lambda I) = 0\)</span>:</p>
 <p><span class="math display">\[
 \det \begin{pmatrix}
@@ -408,8 +453,8 @@ A = \begin{pmatrix}
 \lambda = 5 \quad \text{and} \quad \lambda = 2
 \]</span></p>
 </section>
-<section id="step-2-find-the-eigenvectors" class="level4" data-number="2.1.10.2">
-<h4 data-number="2.1.10.2" class="anchored" data-anchor-id="step-2-find-the-eigenvectors"><span class="header-section-number">2.1.10.2</span> Step 2: Find the Eigenvectors</h4>
+<section id="step-2-find-the-eigenvectors" class="level4" data-number="2.2.10.2">
+<h4 data-number="2.2.10.2" class="anchored" data-anchor-id="step-2-find-the-eigenvectors"><span class="header-section-number">2.2.10.2</span> Step 2: Find the Eigenvectors</h4>
 <p>For <span class="math inline">\(\lambda = 5\)</span>:</p>
 <p><span class="math display">\[
 (A - 5I) \mathbf{v} = 0
@@ -439,8 +484,8 @@ y
 \]</span></p>
 <p>Solving, we get <span class="math inline">\(\mathbf{v}_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}\)</span>.</p>
 </section>
-<section id="step-3-form-the-matrices-p-and-d" class="level4" data-number="2.1.10.3">
-<h4 data-number="2.1.10.3" class="anchored" data-anchor-id="step-3-form-the-matrices-p-and-d"><span class="header-section-number">2.1.10.3</span> Step 3: Form the Matrices <span class="math inline">\(P\)</span> and <span class="math inline">\(D\)</span></h4>
+<section id="step-3-form-the-matrices-p-and-d" class="level4" data-number="2.2.10.3">
+<h4 data-number="2.2.10.3" class="anchored" data-anchor-id="step-3-form-the-matrices-p-and-d"><span class="header-section-number">2.2.10.3</span> Step 3: Form the Matrices <span class="math inline">\(P\)</span> and <span class="math inline">\(D\)</span></h4>
 <p><span class="math display">\[
 P = \begin{pmatrix}
 1 &amp; 1 \\
@@ -451,8 +496,8 @@ P = \begin{pmatrix}
 \end{pmatrix}
 \]</span></p>
 </section>
-<section id="step-4-verify-diagonalization" class="level4" data-number="2.1.10.4">
-<h4 data-number="2.1.10.4" class="anchored" data-anchor-id="step-4-verify-diagonalization"><span class="header-section-number">2.1.10.4</span> Step 4: Verify Diagonalization</h4>
+<section id="step-4-verify-diagonalization" class="level4" data-number="2.2.10.4">
+<h4 data-number="2.2.10.4" class="anchored" data-anchor-id="step-4-verify-diagonalization"><span class="header-section-number">2.2.10.4</span> Step 4: Verify Diagonalization</h4>
 <p><span class="math display">\[
 P^{-1} A P = D
 \]</span></p>
@@ -487,8 +532,8 @@ P^{-1} A P = \begin{pmatrix}
 \]</span></p>
 </section>
 </section>
-<section id="application-computing-a3" class="level3" data-number="2.1.11">
-<h3 data-number="2.1.11" class="anchored" data-anchor-id="application-computing-a3"><span class="header-section-number">2.1.11</span> Application: Computing <span class="math inline">\(A^3\)</span></h3>
+<section id="application-computing-a3" class="level3" data-number="2.2.11">
+<h3 data-number="2.2.11" class="anchored" data-anchor-id="application-computing-a3"><span class="header-section-number">2.2.11</span> Application: Computing <span class="math inline">\(A^3\)</span></h3>
 <p>Using the diagonalization, we can compute <span class="math inline">\(A^3\)</span> easily:</p>
 <p><span class="math display">\[
 A^3 = P D^3 P^{-1}
@@ -543,8 +588,8 @@ A^3 = P D^3 P^{-1} = \begin{pmatrix}
 </div>
 </div>
 </section>
-<section id="key-points-on-diagonalizability" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="key-points-on-diagonalizability"><span class="header-section-number">2.2</span> Key Points on Diagonalizability</h2>
+<section id="key-points-on-diagonalizability" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="key-points-on-diagonalizability"><span class="header-section-number">2.3</span> Key Points on Diagonalizability</h2>
 <ol type="1">
 <li><p><strong>Eigenvalues and Eigenvectors</strong>: A matrix (A) is diagonalizable if and only if it has enough linearly independent eigenvectors to form the columns of the matrix (P). The diagonal elements of (D) are the eigenvalues of (A).</p></li>
 <li><p><strong>Similarity Transformation</strong>: The matrix (P) in the equation (P^{-1}AP = D) is formed from the eigenvectors of (A). This is known as a similarity transformation.</p></li>
